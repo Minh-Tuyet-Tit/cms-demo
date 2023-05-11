@@ -13,7 +13,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <form method="POST" action="{{ url('admin/product/update/'. $product->id) }}">
+                <form method="POST" action="{{ url('admin/product/update/' . $product->id) }}">
                     @csrf
                     <div class="row">
                         <div class="col-sm-6">
@@ -171,11 +171,11 @@
                             <!-- image -->
                             <div class="form-group">
                                 <label>Images</label>
+                                <button type="button" class="btn btn-primary ml-4 mb-4 mt-4" data-toggle="modal"
+                                    data-target="#modelId"><i class="far fa-image"></i></button>
                                 <div class="image_product"></div>
                                 <input name="images" hidden id="images" type="text" class="form-control"
                                     value="{{ $product->images }}" placeholder="Enter meta_description" />
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#modelId"><i class="fas fa-folder-open"></i></button>
                                 @error('images')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -194,14 +194,11 @@
                             <!-- list image -->
                             <div class="form-group">
                                 <label>List Images</label>
+                                <button type="button" class="btn btn-primary ml-4 mb-4 mt-4" data-toggle="modal"
+                                    data-target="#list-img"><i class="fas fa-images"></i></button>
                                 <div class="row list-image-product"></div>
                                 <input name="list_images" hidden id="list-images" type="text" class="form-control"
                                     value="{{ json_encode($links) }}" placeholder="Enter meta_description" />
-
-                
-                                {{-- {{dd(json_encode($links))}} --}}
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#list-img"><i class="fas fa-folder-open"></i></button>
                                 @error('images')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -227,7 +224,4 @@
         </div>
         <!-- /.card -->
     </div>
-
-
-
 @endsection()

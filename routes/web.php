@@ -6,25 +6,32 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 
-Route::get('/', function (Request $request) {
 
-    if (Auth::user()) {
-       return redirect('admin');
-    }
-    return view('home' , compact('request'));
+
+
+Route::get('/language/{lang}', [App\Http\Controllers\LanguageControler::class, 'index']);
+
+
+Route::prefix('/')->group(function () {
+    Route::get('/', [App\Http\Controllers\Controller::class, 'index']);
+
+    Route::get('/blog', [App\Http\Controllers\Controller::class, 'blog']);
+
+
+    Route::get('/blog-detail/{id}', [App\Http\Controllers\Controller::class, 'blog_detail']);
 });
-
-
 
 
 Route::prefix('admin')->middleware('auth')->group(function () {
 
     // dashboard
     Route::get('/', function (Request $request) {
+        // if (Auth::user()) {
+        //     return redirect('admin');
+        // }
 
         return view('Admin.pages.Home', compact('request'));
     })->name('home.index');
-
 
     // categories product
 
@@ -125,15 +132,12 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     // User
     Route::get('/user', [App\Http\Controllers\Admin\UserController::class, 'index']);
-
-
-
 });
 
 
-Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
 
 
 

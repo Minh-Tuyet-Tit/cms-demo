@@ -8,10 +8,10 @@
         <div class="col-md-12">
 
             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Categories Product</h3>
+                <div class="card-header bg-warning">
+                    <h3 class="card-title">{{__('lang.procate')}}</h3>
                     <a href="{{ url('admin/category-product/add') }}" style="float: right" type="button"
-                        class="btn btn-primary">Add Category</a>
+                        class="btn btn-primary">{{__('lang.addcate')}}</a>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body p-0">
@@ -19,11 +19,9 @@
                         <thead>
                             <tr>
                                 <th style="width: 10px">id</th>
-                                <th>Name</th>
-                                <th style="width:150px">Images</th>
-                                <th>Status</th>
-                                <th>Meta Keyword</th>
-                                <th>Meta Description</th>
+                                <th>{{__('lang.name')}}</th>
+                                <th style="width:150px">{{__('lang.thumb')}}</th>
+                                <th>{{__('lang.status')}}</th>
 
                             </tr>
                         </thead>
@@ -38,8 +36,6 @@
                                             alt="img">
                                     </td>
                                     <td>{{ $cate->statusCateProduct->status_name }}</td>
-                                    <td>{{ $cate->meta_keyword }}</td>
-                                    <td>{{ $cate->meta_description }}</td>
                                     <td>
                                         <a href="{{ url('admin/category-product/update/' . $cate->id) }}" type="button"
                                             class="btn btn-primary"><i class="fas fa-edit"></i></a>

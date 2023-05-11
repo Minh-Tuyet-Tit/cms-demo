@@ -7,7 +7,7 @@
         <div class="col-md-4">
             <div class="card card-warning">
                 <div class="card-header">
-                    <h3 class="card-title">Add Category post</h3>
+                    <h3 class="card-title">{{__('lang.addcateposst')}}</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -17,7 +17,7 @@
                             <div class="col-sm-12">
                                 <!-- text input -->
                                 <div class="form-group">
-                                    <label>Name</label>
+                                    <label>{{__('lang.name')}}</label>
                                     <input name="cat_name" type="text" class="form-control"
                                         placeholder="Enter Name Category post" />
 
@@ -60,7 +60,7 @@
                             <div class="col-sm-6">
                                 <!-- select -->
                                 <div class="form-group">
-                                    <label>Status</label>
+                                    <label>{{__('lang.status')}}</label>
                                     <select name="status" class="form-control">
 
                                         @foreach ($status as $st)
@@ -72,7 +72,7 @@
                             </div>
                         </div>
 
-                        <button name="" id="" class="btn btn-primary" role="button">Add</button>
+                        <button name="" id="" class="btn btn-primary" role="button">{{__('lang.add')}}</button>
                     </form>
                 </div>
                 <!-- /.card-body -->
@@ -84,7 +84,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Status</h3>
+                    <h3 class="card-title">{{__('lang.prostcate')}}</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body p-0">
@@ -92,8 +92,8 @@
                         <thead>
                             <tr>
                                 <th style="width: 10px">id</th>
-                                <th>Name</th>
-                                <th>Status</th>
+                                <th>{{__('lang.name')}}</th>
+                                <th>{{__('lang.status')}}</th>
                             </tr>
                         </thead>
                         <tbody>

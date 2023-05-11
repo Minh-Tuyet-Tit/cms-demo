@@ -78,7 +78,13 @@
                             <!-- textarea -->
                             <div class="form-group">
                                 <label>Summary</label>
-                                <textarea name="summary" id="product-summary" placeholder="Enter Summary Product"><?php echo old('summary'); ?></textarea>
+                                <textarea name="summary" id="product-summary" placeholder="Enter Summary Product">
+                                
+                                    <?php echo old('summary'); ?>
+                                    {{-- <figure class="image image-style-side"><img src="" alt="">
+                                        <figcaption></figcaption>
+                                    </figure> --}}
+                                </textarea>
                                 @error('summary')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -173,11 +179,12 @@
                             <!-- image -->
                             <div class="form-group">
                                 <label>Images</label>
+                                <button   type="button" class="btn btn-primary ml-4 mb-4 mt-4" data-toggle="modal"
+                                    data-target="#modelId"><i class="far fa-image"></i></button>
                                 <div class="image_product"></div>
                                 <input name="images" hidden id="images" type="text" class="form-control"
                                     value="{{ old('images') }}" />
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#modelId"><i class="fas fa-folder-open"></i></button>
+                                
                                 @error('images')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -196,11 +203,12 @@
                             <!-- list images -->
                             <div class="form-group">
                                 <label>List Images</label>
+                                <button type="button" class="btn btn-primary ml-4 mb-4 mt-4" data-toggle="modal"
+                                    data-target="#list-img"><i class="fas fa-images"></i></button>
                                 <div class="row list-image-product"></div>
                                 <input name="list_images" hidden id="list-images" type="text" class="form-control"
                                     value="{{ old('list_images') }}" />
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#list-img"><i class="fas fa-folder-open"></i></button>
+                                
                                 @error('images')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>

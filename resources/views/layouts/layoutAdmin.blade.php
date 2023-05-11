@@ -1,5 +1,101 @@
 <?php
-$menus = config('menu');
+// $menus = config('menu');
+
+$menus = [
+    [
+        'lable' => __('lang.dashboard'),
+        'link' => 'admin',
+        'icon' => 'fas fa-tachometer-alt',
+    ],
+    [
+        'lable' => __('lang.cate'),
+        'link' => '#',
+        'icon' => 'fas fa-tasks',
+        'items' => [
+            [
+                'lable' => __('lang.procate'),
+                'link' => 'admin/category-product',
+                'icon' => 'fab fa-product-hunt',
+            ],
+            [
+                'lable' => __('lang.prostcate'),
+                'link' => 'admin/category-post',
+                'icon' => 'fab fa-product-hunt',
+            ],
+        ],
+    ],
+    [
+        'lable' => __('lang.pro_post'),
+        'link' => '#',
+        'icon' => 'fas fa-mail-bulk',
+        'items' => [
+            [
+                'lable' => __('lang.product'),
+                'link' => 'admin/product',
+                'icon' => 'fab fa-product-hunt',
+            ],
+            [
+                'lable' => __('lang.post'),
+                'link' => 'admin/post',
+                'icon' => 'fab fa-product-hunt',
+            ],
+        ],
+    ],
+    [
+        'lable' => __('lang.user'),
+        'link' => 'admin/user',
+        'icon' => 'fas fa-user',
+    ],
+    [
+        'lable' => __('lang.image'),
+        'link' => '#',
+        'icon' => 'fas fa-images',
+        'items' => [
+            [
+                'lable' => __('lang.galery'),
+                'link' => 'admin/imagegalery',
+                'icon' => 'fab fa-envira',
+            ],
+            [
+                'lable' => __('lang.slide'),
+                'link' => 'admin/imageslideshow',
+                'icon' => 'fas fa-sliders-h',
+            ],
+        ],
+    ],
+    [
+        'lable' => __('lang.setting'),
+        'link' => '#',
+        'icon' => 'fas fa-cog',
+        'items' => [
+            [
+                'lable' => __('lang.config'),
+                'link' => 'admin/config',
+                'icon' => 'fas fa-check-double',
+            ],
+            [
+                'lable' => __('lang.status'),
+                'link' => 'admin/status',
+                'icon' => 'fas fa-toggle-on',
+            ],
+            [
+                'lable' => __('lang.filetype'),
+                'link' => 'admin/filetype',
+                'icon' => 'fas fa-file',
+            ],
+            [
+                'lable' => __('lang.position'),
+                'link' => 'admin/position',
+                'icon' => 'fab fa-deezer',
+            ],
+            [
+                'lable' => __('lang.resource'),
+                'link' => 'admin/resource',
+                'icon' => 'fab fa-sourcetree',
+            ],
+        ],
+    ],
+];
 
 ?>
 
@@ -56,6 +152,10 @@ $menus = config('menu');
             cursor: pointer;
             transition: 0.2s linear;
         }
+
+        td img {
+            width: 100%
+        }
     </style>
 
     <script src="{{ asset('assets/ckeditor5/ckeditor.js') }}"></script>
@@ -63,6 +163,8 @@ $menus = config('menu');
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
+
+
 
         {{-- <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
@@ -79,7 +181,7 @@ $menus = config('menu');
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="{{ url('admin') }}" class="nav-link active">Home</a>
+                    <a href="{{ url('admin') }}" class="nav-link active">{{ trans('lang.home') }}</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{ url('') }}" class="nav-link">Contact</a>
@@ -96,8 +198,8 @@ $menus = config('menu');
                     <div class="navbar-search-block">
                         <form class="form-inline">
                             <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                                    aria-label="Search" />
+                                <input class="form-control form-control-navbar" type="search"
+                                    placeholder="{{ trans('lang.search') }}" aria-label="Search" />
                                 <div class="input-group-append">
                                     <button class="btn btn-navbar" type="submit">
                                         <i class="fas fa-search"></i>
@@ -110,6 +212,8 @@ $menus = config('menu');
                         </form>
                     </div>
                 </li>
+
+
 
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -127,6 +231,24 @@ $menus = config('menu');
                         @csrf
                     </form>
                 </li>
+
+
+                <!-- Language Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="fas fa-globe-europe"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right p-0">
+                        <a href="{{ url('language/en') }}"
+                            class="dropdown-item  @if (session('lang')=='en') active  @endif">
+                            {{ trans('lang.en') }}
+                        </a>
+                        <a href="{{ url('language/vi') }}" class="dropdown-item @if (session('lang')=='vi') active  @endif">
+                            {{ trans('lang.vi') }}
+                        </a>
+
+                    </div>
+                </li>
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -137,7 +259,7 @@ $menus = config('menu');
             <a href="{{ url('/admin') }}" class="brand-link">
                 <img src="{{ asset('assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: 0.8" />
-                <span class="brand-text font-weight-light">Admin</span>
+                <span class="brand-text font-weight-light">{{ trans('lang.admin') }}</span>
             </a>
 
             <!-- Sidebar -->
@@ -161,8 +283,6 @@ $menus = config('menu');
                 <nav class="mt-2">
                     <ul id="main-menu" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview"
                         role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
                         @foreach ($menus as $key => $menu)
                             <li class="nav-item main-nav ">
                                 <a href="{{ url($menu['link']) }}"
@@ -218,23 +338,6 @@ $menus = config('menu');
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            {{-- <h1 class="m-0">Starter Page</h1> --}}
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-sm-6">
-                            {{-- <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="{{ url('admin') }}">Home</a></li>
-                                <li class="breadcrumb-item active">{{ route('create') }}</li>
-                            </ol> --}}
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
 
@@ -278,7 +381,6 @@ $menus = config('menu');
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        {{-- <h5 class="modal-title">sm</h5> --}}
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -329,15 +431,63 @@ $menus = config('menu');
             .catch(error => {
                 console.error(error);
             });
-        ClassicEditor
-            .create(document.querySelector('#product-summary'))
-            .catch(error => {
-                console.error(error);
-            });
+        // ClassicEditor
+        //     .create(document.querySelector('#product-summary')), {
+        //         simpleUpload: {
+        //             uploadUrl: '/your-image-upload-api',
+        //             headers: {
+        //                 'X-CSRF-TOKEN': 'CSRF-Token',
+        //                 Authorization: 'Bearer <JSON Web Token>'
+        //             },
+        //             acceptedFileTypes: ['image/jpeg', 'image/png', 'image/gif']
+        //         }
+        //     }
+        //     .catch(error => {
+        //         console.error(error);
+        //     });
         ClassicEditor
             .create(document.querySelector('#product-description'))
             .catch(error => {
                 console.error(error);
+            });
+
+
+
+        ClassicEditor
+            .create(document.querySelector('#product-summary'), {
+                toolbar: {
+                    items: [
+                        'undo', 'redo',
+                        '|', 'heading',
+                        '|', 'bold', 'italic',
+                        '|', 'link', 'uploadImage', 'insertTable', 'mediaEmbed',
+                        '|', 'bulletedList', 'numberedList', 'outdent', 'indent'
+                    ]
+                },
+                cloudServices: {
+                    // All predefined builds include the Easy Image feature.
+                    // Provide correct configuration values to use it.
+                    // tokenUrl: 'http://127.0.0.1:8000/',
+                    // uploadUrl: '{{ url('filemanager/dialog.php?field_id=images') }}'
+                    // Read more about Easy Image - https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/easy-image.html.
+                    // For other image upload methods see the guide - https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html.
+                }
+            })
+            .then(editor => {
+                window.editor = editor;
+
+                const upload = document.querySelector('.ck-file-dialog-button')
+                const btn = upload.querySelector('button')
+                btn.removeAttribute('aria-labelledby')
+                btn.setAttribute('data-toggle', "modal");
+                btn.setAttribute('data-target', "#modelId")
+                const input = upload.querySelector('input');
+                upload.removeChild(input);
+                console.log(upload);
+
+            })
+            .catch(err => {
+                console.error(err);
             });
     </script>
 
@@ -367,7 +517,6 @@ $menus = config('menu');
                 listImage.push(inputImg.value)
             }
         }
-        console.log(listImage);
 
         function render() {
             let html

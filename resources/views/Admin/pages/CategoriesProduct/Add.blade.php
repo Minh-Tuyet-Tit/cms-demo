@@ -3,7 +3,7 @@
 @section('main')
     <div class="card card-warning col-md-8  m-auto">
         <div class="card-header">
-            <h3 class="card-title">Add Category Product </h3>
+            <h3 class="card-title">{{__('lang.addcatepro')}} </h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -13,9 +13,9 @@
                     <div class="col-sm-12">
                         <!-- text input -->
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>{{__('lang.name')}}</label>
                             <input name="cat_name" type="text" class="form-control"
-                                placeholder="Enter name categoty product" />
+                                placeholder="{{__('lang.enternamecatepro')}}" />
                             @error('cat_name')
                                 <div class="alert alert-default-secondary" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -50,7 +50,7 @@
                     <div class="col-sm-6">
                         <!-- select -->
                         <div class="form-group">
-                            <label>Status</label>
+                            <label>{{__('lang.status')}}</label>
                             <select name="status" class="form-control">
 
                                 @foreach ($status as $st)
@@ -62,7 +62,7 @@
                 </div>
                 <div id="inputRender"></div>
                 <div class="form-group">
-                    <label>Images</label>
+                    <label>{{__('lang.thumb')}}</label>
                     <div class="image_product"></div>
                     <input name="images" hidden id="images" type="text" class="form-control"
                         value="{{ old('images') }}" />
@@ -76,9 +76,9 @@
                 </div>
 
                 <div style="display: flex; justify-content: space-between">
-                    <button class="btn btn-primary" href="#" role="button">Add</button>
-                    <a href="{{ url('admin/category-product') }}" class="btn btn-primary" href="#"
-                        role="button">Cancle</a>
+                    <button class="btn btn-primary" href="#" role="button">{{__('lang.addcate')}}</button>
+                    <a href="{{ url('admin/category-product') }}" class="btn btn-dark" href="#"
+                        role="button">{{__('lang.cancel')}}</a>
                 </div>
 
             </form>

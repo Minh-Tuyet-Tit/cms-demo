@@ -154,13 +154,13 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <!-- text input -->
+                            {{-- image --}}
                             <div class="form-group">
                                 <label>Image</label>
+                                <button type="button" class="btn btn-primary ml-4 mb-4 mt-4" data-toggle="modal"
+                                    data-target="#modelId"><i class="far fa-image"></i></button>
                                 <div class="image_product"></div>
                                 <input name="image" hidden id="images" type="text" class="form-control" />
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modelId"><i
-                                        class="fas fa-folder-open"></i></button>
                                 @error('images')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -177,7 +177,7 @@
                     <div>
                         <button type="submit" class="btn btn-primary mt-3" role="button">Add</button>
                         <a style="float: right" href="{{ url('admin/post') }}" class="btn btn-dark mt-3"
-                            role="button">Cancle</a>
+                            role="button">Cancel</a>
                     </div>
 
                 </form>
@@ -191,46 +191,5 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    {{-- <h5 class="modal-title">sm</h5> --}}
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <iframe src="{{ url('filemanager/dialog.php?field_id=images') }}"
-                        style="height: 300px; width:100%"></iframe>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="list-img" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    {{-- <h5 class="modal-title">sm</h5> --}}
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <iframe src="{{ url('filemanager/dialog.php?field_id=list-images') }}"
-                        style="height: 300px; width:100%"></iframe>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 @endsection()

@@ -1,9 +1,9 @@
 @extends('layouts.layoutAdmin')
 
 @section('main')
-    <div class="card card-warning col-md-8  m-auto">
-        <div class="card-header">
-            <h3 class="card-title">Add Category Product </h3>
+    <div class="card card-warning w-75 m-auto ">
+        <div class="card-header bg-warning">
+            <h3 class="card-title">{{__('lang.updatecatepro')}}</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -13,7 +13,7 @@
                     <div class="col-sm-12">
                         <!-- text input -->
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>{{__('lang.name')}}</label>
                             <input name="cat_name" type="text" class="form-control" value="{{ $cate->cat_name }}"
                                 placeholder="Enter name categoty product" />
                             @error('cat_name')
@@ -50,7 +50,7 @@
                     <div class="col-sm-6">
                         <!-- select -->
                         <div class="form-group">
-                            <label>Status</label>
+                            <label>{{__('lang.status')}}</label>
                             <select name="status" class="form-control">
                                 {{-- <option value="{{ $cate->status }}">{{ $st->status_name }}</option> --}}
                                 @foreach ($status as $st)
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Images</label>
+                    <label>{{__('lang.thumb')}}</label>
                     <div class="image_product"></div>
                     <input name="images" hidden id="images" type="text" class="form-control"
                         value="{{ $cate->images }}" placeholder="Enter meta_description" />
@@ -75,9 +75,9 @@
                 </div>
 
                 <div style="display: flex; justify-content: space-between">
-                    <button class="btn btn-primary" href="#" role="button">Update</button>
-                    <a href="{{ url('admin/category-product') }}" class="btn btn-primary" href="#"
-                        role="button">Cancle</a>
+                    <button class="btn btn-primary" href="#" role="button">{{__('lang.updatecatepro')}}</button>
+                    <a href="{{ url('admin/category-product') }}" class="btn btn-dark"
+                        role="button">{{__('lang.cancel')}}</a>
                 </div>
 
             </form>
