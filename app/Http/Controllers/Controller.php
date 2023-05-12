@@ -29,10 +29,11 @@ class Controller extends BaseController
     public function blog_detail(Request $request,$id){
         try {
             $post = Posts::findOrFail($id);
+            $posts = Posts::latest()->take(5)->get();
         } catch (\Throwable $th) {
             return redirect()->back();
         }
 
-        return view('Frontend.Blog-detail', compact('post','request'));
+        return view('Frontend.Blog-detail', compact('post','request','posts'));
     }
 }

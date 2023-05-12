@@ -249,10 +249,10 @@
                                 </div>
                             </div>
                             <div class="nav__uncollapsed">
-                                <div class="nav__uncollapsed-item d-none d-md-flex">
+                                {{-- <div class="nav__uncollapsed-item d-none d-md-flex">
                                     <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a>
                                     <a href="sign-up.html" class="cmn-button">Sign Up</a>
-                                </div>
+                                </div> --}}
                                 <button class="nav__bar d-block d-xl-none">
                                     <span class="icon-bar top-bar"></span>
                                     <span class="icon-bar middle-bar"></span>
@@ -278,7 +278,7 @@
                 <div class="col-md-6 col-lg-4 col-xl-3 section__col">
                     <div class="footer__single">
                         <a href="index.html" class="footer__single-logo">
-                            <img src="assets/images/logo-light.png" alt="Logo" />
+                            <img src="{{asset('Frontend/images/logo-light.png')}}" alt="Logo" />
                         </a>
                         <div class="footer__single-content">
                             <p>

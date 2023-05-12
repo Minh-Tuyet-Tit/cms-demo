@@ -11,22 +11,9 @@
     <section class="banner--inner">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="banner--inner__content">
-                        <h2>Blog Details</h2>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="banner--inner__breadcrumb d-flex justify-content-start justify-content-md-end">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item">Blog</li>
-                                <li class="breadcrumb-item active" aria-current="page">
-                                    Blog Details
-                                </li>
-                            </ol>
-                        </nav>
+                        <h2 class="text-center">{{$post->post_title}}</h2>
                     </div>
                 </div>
             </div>
@@ -53,104 +40,11 @@
                                 </div>
 
                                 <?= $post->description ?>
-                                <div class="blog-details__content">
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting industry. Lorem Ipsum has been the industry's
-                                        standard dummy text ever since the 1500s, when an unknown
-                                        printer took a galley of type and scrambled it to make a
-                                        type specimen book. It has survived not only five
-                                        centuries, but also the leap into electronic...
-                                    </p>
-                                </div>
-                                <div class="blog-details__content mb-0">
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting industry. Lorem Ipsum has been the industry's
-                                        standard dummy text ever since the 1500s, when an unknown
-                                        printer took a galley of type and scrambled it to make a
-                                        type specimen book. It has survived not only five
-                                        centuries, but also the leap into electronic...
-                                    </p>
-                                </div>
-                                <div class="blog-details__meta-poster">
-                                    <div class="row section__row align-items-center">
-                                        <div class="col-md-6 section__col">
-                                            <div class="blog-details__meta-poster-single">
-                                                <img src="{{ asset('Frontend/images/blog/details-thumb-one.png') }}"
-                                                    alt="Blog Details">
-                                            </div>
-                                            <div class="blog-details__meta-poster-single">
-                                                <img src="{{ asset('Frontend/images/blog/details-thumb-two.png') }}"
-                                                    alt="Blog Details">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 section__col">
-                                            <div class="blog-details__meta-poster-single">
-                                                <img src="{{ asset('Frontend/images/blog/details-thumb-two.png') }}"
-                                                    alt="Blog Details">
-                                                <div class="play-wrapper">
-                                                    <a href="https://www.youtube.com/watch?v=RvreULjnzFo" target="_blank"
-                                                        title="Youtube Video Player" class="play-btn">
-                                                        <i class="fa-solid fa-play"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-details__content">
-                                    <p>
-                                        But I must explain to you how all this mistaken idea of
-                                        denouncing pleasure and praising pain was born and I will
-                                        give you a complete account of the system, and expound the
-                                        actual teachings of the great explorer of the truth, the
-                                        master-builder of human happiness. No one rejects,
-                                        dislikes, or avoids pleasure itself, because it is
-                                        pleasure, but because those who do not know how to pursue
-                                        pleasure rationally encounter consequences that are
-                                        extremely painful.
-                                    </p>
-                                </div>
-                                <div class="blog-details__meta-footer">
-                                    <div class="social justify-content-start">
-                                        <a href="#">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                        <a href="#">
-                                            <i class="fa-brands fa-twitter"></i>
-                                        </a>
-                                        <a href="#">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                        <a href="#">
-                                            <i class="fa-brands fa-square-instagram"></i>
-                                        </a>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <a href="facility.html" class="cmn-button cmn-button--secondary">Facility</a>
-                                        </li>
-                                        <li>
-                                            <a href="gallery.html" class="cmn-button cmn-button--secondary">Gallery</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html" class="cmn-button cmn-button--secondary">Shop</a>
-                                        </li>
-                                        <li>
-                                            <a href="training.html" class="cmn-button cmn-button--secondary">Training</a>
-                                        </li>
-                                    </ul>
-                                </div>
+
                             </div>
                         </div>
 
-                        <div class="grid">
-                            <div class="grid-item">...a</div>
-                            <div class="grid-item grid-item--width2">...b</div>
-                            <div class="grid-item">...c</div>
-                            
-                        </div>
+
                         {{-- <div class="blog-details__comment">
                             <h4>Comments <span>(03)</span></h4>
                             <div class="blog-comment-single">
@@ -337,45 +231,24 @@
                             <h5>Popular Blog Posts</h5>
                             <hr>
                             <div class="sidebar__item">
-                                <div class="sidebar__item-single">
-                                    <div class="sidebar__item-thumb">
-                                        <a href="blog-details.html" title="Read More">
-                                            <img src="assets/images/blog/seven.png" alt="Blog">
-                                        </a>
+
+                                @foreach ($posts as $post)
+                                    <div class="sidebar__item-single">
+                                        <div class="sidebar__item-thumb">
+                                            <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More">
+                                                <img src="{{ $post->image }}" alt="Blog">
+                                            </a>
+                                        </div>
+                                        <div class="sidebar__item-content">
+                                            <h6>
+                                                <a href="{{ url('blog-detail/' . $post->id) }}"
+                                                    title="Read More">{{ $post->post_title }}</a>
+                                            </h6>
+                                            <p class="seocndary-text">{{ $post->created_at }}</p>
+                                        </div>
                                     </div>
-                                    <div class="sidebar__item-content">
-                                        <h6>
-                                            <a href="blog-details.html" title="Read More">Golf course workers...</a>
-                                        </h6>
-                                        <p class="seocndary-text">December 19, 2022</p>
-                                    </div>
-                                </div>
-                                <div class="sidebar__item-single">
-                                    <div class="sidebar__item-thumb">
-                                        <a href="blog-details.html" title="Read More">
-                                            <img src="assets/images/blog/eight.png" alt="Blog">
-                                        </a>
-                                    </div>
-                                    <div class="sidebar__item-content">
-                                        <h6>
-                                            <a href="blog-details.html" title="Read More">What it's like playing...</a>
-                                        </h6>
-                                        <p class="seocndary-text">December 19, 2022</p>
-                                    </div>
-                                </div>
-                                <div class="sidebar__item-single">
-                                    <div class="sidebar__item-thumb">
-                                        <a href="blog-details.html" title="Read More">
-                                            <img src="assets/images/blog/nine.png" alt="Blog">
-                                        </a>
-                                    </div>
-                                    <div class="sidebar__item-content">
-                                        <h6>
-                                            <a href="blog-details.html" title="Read More">Golftio Club offers...</a>
-                                        </h6>
-                                        <p class="seocndary-text">December 19, 2022</p>
-                                    </div>
-                                </div>
+                                @endforeach
+                                
                             </div>
                         </div>
                         <div class="sidebar__single">
@@ -446,138 +319,32 @@
             <div class="row justify-content-center section__row">
                 <div class="col-sm-10 col-md-12 section__col">
                     <div class="related-news__slider">
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="blog-details.html" title="Read More">
-                                    <img src="assets/images/blog/one.png" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="blog-details.html" title="Read More">Discount Golf Clubs & Equipment...</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                        @foreach ($posts as $post)
+                            <div class="blog-single">
+                                <div class="blog__thumb">
+                                    <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More">
+                                        <img src="{{ $post->image }}" alt="Blog">
+                                    </a>
                                 </div>
-                                <p class="secondary-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have...
-                                </p>
-                                <a href="blog-details.html" title="Read More"
-                                    class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="blog-details.html" title="Read More">
-                                    <img src="assets/images/blog/two.png" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="blog-details.html" title="Read More">Shop Golf Clubs Today Available...</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                <div class="blog__content">
+                                    <h5>
+                                        <a href="{{ url('blog-detail/' . $post->id) }}"
+                                            title="Read More">{{ $post->post_title }}</a>
+                                    </h5>
+                                    <div class="blog__content-meta">
+                                        <p><i class="golftio-user"></i> Admin</p>
+                                        <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                    </div>
+                                    <p class="secondary-text">
+                                        <?= $post->summary ?>
+                                    </p>
+                                    <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
+                                        class="cmn-button cmn-button--secondary">Read more</a>
                                 </div>
-                                <p class="secondary-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have...
-                                </p>
-                                <a href="blog-details.html" title="Read More"
-                                    class="cmn-button cmn-button--secondary">Read more</a>
                             </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="blog-details.html" title="Read More">
-                                    <img src="assets/images/blog/three.png" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="blog-details.html" title="Read More">The 10 most bizarre golf in the...</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
-                                </div>
-                                <p class="secondary-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have...
-                                </p>
-                                <a href="blog-details.html" title="Read More"
-                                    class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="blog-details.html" title="Read More">
-                                    <img src="assets/images/blog/one.png" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="blog-details.html" title="Read More">Discount Golf Clubs & Equipment...</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
-                                </div>
-                                <p class="secondary-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have...
-                                </p>
-                                <a href="blog-details.html" title="Read More"
-                                    class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="blog-details.html" title="Read More">
-                                    <img src="assets/images/blog/two.png" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="blog-details.html" title="Read More">Shop Golf Clubs Today Available...</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
-                                </div>
-                                <p class="secondary-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have...
-                                </p>
-                                <a href="blog-details.html" title="Read More"
-                                    class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="blog-details.html" title="Read More">
-                                    <img src="assets/images/blog/three.png" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="blog-details.html" title="Read More">The 10 most bizarre golf in the...</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
-                                </div>
-                                <p class="secondary-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have...
-                                </p>
-                                <a href="blog-details.html" title="Read More"
-                                    class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
+                        @endforeach
+
+
                     </div>
                 </div>
             </div>
@@ -592,46 +359,46 @@
                 <div class="col-12">
                     <div class="sponsor__inner">
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/one.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/one.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/two.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/two.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/three.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/three.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/four.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/four.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/five.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/five.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/six.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/six.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/one.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/one.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/one.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/one.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/two.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/two.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/three.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/three.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/four.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/four.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/five.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/five.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/six.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/six.png')}}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="assets/images/sponsor/one.png" alt="Sponsor">
+                            <img src="{{asset('Frontend/images/sponsor/one.png')}}" alt="Sponsor">
                         </div>
                     </div>
                 </div>

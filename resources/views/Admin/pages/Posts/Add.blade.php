@@ -20,7 +20,7 @@
                             <!-- text input -->
                             <div class="form-group">
                                 <label>Post title</label>
-                                <input name="post_title" type="text" class="form-control"
+                                <input name="post_title" type="text" class="form-control" value="{{ old('post_title') }}"
                                     placeholder="Enter Post title" />
                                 @error('post_title')
                                     <div class="alert alert-default-secondary" role="alert">
@@ -36,7 +36,8 @@
                             <!-- text input -->
                             <div class="form-group">
                                 <label>Order</label>
-                                <input name="order" type="number" class="form-control" placeholder="Enter Order" />
+                                <input name="order" type="number" class="form-control" value="{{ old('order') }}"
+                                    placeholder="Enter Order" />
                                 @error('order')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -64,7 +65,7 @@
                             <!-- textarea -->
                             <div class="form-group">
                                 <label>Summary</label>
-                                <textarea name="summary" id="product-summary" placeholder="Enter Summary Product"></textarea>
+                                <textarea name="summary" id="product-summary" placeholder="Enter Summary Product">{{old('summary')}}</textarea>
                                 @error('summary')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -76,7 +77,7 @@
                             <!-- textarea -->
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea name="description" id="product-description" placeholder="Enter Description Product"></textarea>
+                                <textarea name="description" id="product-description" placeholder="Enter Description Product">{{old('description')}}</textarea>
                                 @error('description')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -161,7 +162,7 @@
                                     data-target="#modelId"><i class="far fa-image"></i></button>
                                 <div class="image_product"></div>
                                 <input name="image" hidden id="images" type="text" class="form-control" />
-                                @error('images')
+                                @error('image')
                                     <div class="alert alert-default-secondary" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </div>
@@ -173,7 +174,7 @@
 
 
                     </div>
-                    
+
                     <div>
                         <button type="submit" class="btn btn-primary mt-3" role="button">Add</button>
                         <a style="float: right" href="{{ url('admin/post') }}" class="btn btn-dark mt-3"
@@ -186,10 +187,4 @@
         </div>
         <!-- /.card -->
     </div>
-
-
-
-
-
-    
 @endsection()

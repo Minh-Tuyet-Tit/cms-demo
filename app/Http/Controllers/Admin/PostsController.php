@@ -17,7 +17,8 @@ class PostsController extends Controller
     public function index(Request $request)
     {
 
-        $data = Posts::all();
+        $data =
+            Posts::latest()->take(10)->get();
         $status = Status::all();
         $category = CategoryPost::all();
 
@@ -29,7 +30,8 @@ class PostsController extends Controller
 
     public function add(Request $request)
     {
-        $data = Posts::all();
+        $data =
+            $posts = Posts::latest()->take(10)->get();
         $status = Status::all();
         $category = CategoryPost::all();
 
@@ -42,6 +44,7 @@ class PostsController extends Controller
         $rules = [
             'post_title' => 'required|unique:posts|max:255',
             'summary' => 'required',
+            'image' => 'required',
             'description' => 'required',
             'meta_keyword' => 'required',
             'meta_description' => 'required',
@@ -54,11 +57,18 @@ class PostsController extends Controller
             'description.required' => 'Please enter description',
             'meta_keyword.required' => 'Please enter meta_keyword',
             'meta_description.required' => 'Please enter meta_description',
+            'image.required' => 'Please add image',
 
         ];
         $request->validate($rules, $message);
-       
-        Posts::create($request->all());
+
+        try {
+            Posts::create($request->all());
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('fail', 'Posts created fail');
+        }
+
+
 
 
         return redirect(url('admin/post'))->with('success', 'Posts created successfully');
@@ -101,12 +111,12 @@ class PostsController extends Controller
 
         ];
         $request->validate($rules, $message);
-        
+
         $post = Posts::findOrFail($id);
 
 
-       
-        
+
+
 
         $post->update($request->all());
 
