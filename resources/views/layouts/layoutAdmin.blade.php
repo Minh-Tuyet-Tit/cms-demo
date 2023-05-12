@@ -127,35 +127,9 @@ $menus = [
     <link rel="stylesheet" href="{{ asset('assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/plugins/daterangepicker/daterangepicker.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/plugins/summernote/summernote-bs4.min.css') }}" />
+    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
     <style>
-        .image-item {
-            position: relative;
-        }
-
-        .image-item:hover .remove-image {
-            opacity: 1;
-        }
-
-        .remove-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            cursor: pointer;
-            transition: 0.2s linear;
-        }
-
-        td img {
-            width: 100%
-        }
+        
     </style>
 
     <script src="{{ asset('assets/ckeditor5/ckeditor.js') }}"></script>

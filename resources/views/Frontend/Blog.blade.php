@@ -30,20 +30,21 @@
                             @foreach ($posts as $post)
                                 <div class="col-sm-10 col-md-6 section__col">
                                     <div class="blog-single">
-                                        <div class="blog__thumb" style="height: 300px; overflow: hidden;">
-                                            <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More">
-                                                <img src="{{ $post->image }}" alt="Blog">
+                                        <div class="blog__thumb">
+                                            <a  href="{{ url('blog-detail/' . $post->id) }}" title="Read More">
+                                                <img style="height: 100%" src="{{ $post->image }}" alt="Blog">
                                             </a>
                                         </div>
                                         <div class="blog__content">
                                             <h5>
-                                                <a href="blog-details.html" title="Read More">{{ $post->post_title }}</a>
+                                                <a href="{{url('blog-detail/'. $post->id)}}" title="Read More">{{ $post->post_title }}</a>
                                             </h5>
                                             <div class="blog__content-meta">
                                                 <p><i class="golftio-user"></i> Admin</p>
                                                 <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
                                             </div>
-                                            <p class="secondary-text"><?= $post->summary ?></p>
+                                            <?= $post->summary?>
+                                            {{-- <p class="secondary-text">{{ substr($post->summary, 3, 100)}}</p> --}}
                                             <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
                                                 class="cmn-button cmn-button--secondary">Read more</a>
                                         </div>

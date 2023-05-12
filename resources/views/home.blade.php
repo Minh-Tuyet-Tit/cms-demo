@@ -1077,7 +1077,7 @@
                 <div class="col-lg-6 col-xxl-6 section__col">
                     <div class="section__content">
                         <h5 class="section__content-sub-title">
-                            Testimonial
+                            Blogs
                         </h5>
                         <h2 class="section__content-title">
                             Our Members Thinking About Us

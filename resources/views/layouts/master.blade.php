@@ -41,6 +41,7 @@
 
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('Frontend/css/main.css') }}" />
+    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
 
     <style>
         .grid-item {
@@ -119,13 +120,13 @@
 
                                 <ul class="nav__menu-items">
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
+                                        <a href="{{url('/')}}" class="nav__menu-link nav__menu-link">
                                             Home
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
-                                            Facility
+                                            About us
                                         </a>
                                         {{-- <ul class="nav__dropdown">
                                             <li>
@@ -138,34 +139,24 @@
                                         </ul> --}}
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
-                                            Trainings
-                                        </a>
-                                        {{-- <ul class="nav__dropdown">
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav"
-                                                    href="training.html">Trainings</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav"
-                                                    href="training-details.html">Training Details</a>
-                                            </li>
-                                        </ul> --}}
-                                    </li>
-                                    <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('blog') }}" class="nav__menu-link nav__menu-link">
                                             Blog
                                         </a>
-                                        {{-- <ul class="nav__dropdown">
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav"
-                                                    href="training.html">Trainings</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav"
-                                                    href="training-details.html">Training Details</a>
-                                            </li>
-                                        </ul> --}}
+                                    </li>
+                                    <li class="nav__menu-item nav__menu-item--dropdown">
+                                        <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
+                                            Members
+                                        </a>
+                                    </li>
+                                    <li class="nav__menu-item nav__menu-item--dropdown">
+                                        <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
+                                            Event
+                                        </a>
+                                    </li>
+                                    <li class="nav__menu-item nav__menu-item--dropdown">
+                                        <a href="" class="nav__menu-link nav__menu-link">
+                                            Gallery
+                                        </a>
                                     </li>
                                     {{-- <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="javascript:void(0)" class="nav__menu-link nav__menu-link--dropdown">
@@ -249,10 +240,10 @@
                                 </div>
                             </div>
                             <div class="nav__uncollapsed">
-                                {{-- <div class="nav__uncollapsed-item d-none d-md-flex">
-                                    <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a>
+                                <div class="nav__uncollapsed-item d-none d-md-flex">
+                                    {{-- <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a> --}}
                                     <a href="sign-up.html" class="cmn-button">Sign Up</a>
-                                </div> --}}
+                                </div>
                                 <button class="nav__bar d-block d-xl-none">
                                     <span class="icon-bar top-bar"></span>
                                     <span class="icon-bar middle-bar"></span>

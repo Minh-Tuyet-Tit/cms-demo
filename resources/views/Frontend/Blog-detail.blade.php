@@ -335,9 +335,8 @@
                                         <p><i class="golftio-user"></i> Admin</p>
                                         <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
                                     </div>
-                                    <p class="secondary-text">
-                                        <?= $post->summary ?>
-                                    </p>
+                                    <?= $post->summary ?>
+                                    
                                     <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
                                         class="cmn-button cmn-button--secondary">Read more</a>
                                 </div>
