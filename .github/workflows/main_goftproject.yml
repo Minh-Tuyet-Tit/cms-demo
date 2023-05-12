@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'goftProject'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0CFD82686A5747DAB7465F9707941CD4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5F145F7A57DD4251B88C906BB2F58A7F }}
           package: .
