@@ -36,11 +36,11 @@
                                 <td>{{ $post->post_title }}</td>
                                 <td><img style="width: 100%" src="{{ $post->image }}" alt="img"></td>
                                 <td>
-                                    {{ $category[array_search($post->catPro_id, array_column($category->toArray(), 'id'))]->cat_name }}
+                                    {{ $post->categoryPost->cat_name }}
                                 </td>
                                 <td><?php echo $post->summary; ?></td>
                                 <td><?php echo $post->description; ?></td>
-                                <td>{{ $status[array_search($post->status, array_column($status->toArray(), 'id'))]->status_name }}
+                                <td>{{ $post->statusPost->status_name }}
                                 </td>
                                 <td>{{ $post->order }}</td>
                                 <td>{{ $post->user_id }}</td>

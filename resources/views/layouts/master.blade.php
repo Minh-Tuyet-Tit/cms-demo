@@ -10,11 +10,12 @@
     <!-- #favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
     <!-- #title -->
-    <title>GOLFTIO | Golf Club</title>
+    <title>Golf Club</title>
     <!-- #keywords -->
     <meta name="keywords" content="Golf, Golftio" />
     <!-- #description -->
     <meta name="description" content="Golftio" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
     <!-- ==== css dependencies start ==== -->
 
@@ -41,12 +42,14 @@
 
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('Frontend/css/main.css') }}" />
-    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
 
     <style>
         .grid-item {
             width: 200px;
         }
+
+
 
         .grid-item--width2 {
             width: 400px;
@@ -97,7 +100,7 @@
         </div>
     </div> --}}
 
-    <header class="header {{$request->is('/')? '':'header--secondary'}}">
+    <header class="header {{ $request->is('/') ? '' : 'header--secondary' }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -120,7 +123,7 @@
 
                                 <ul class="nav__menu-items">
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{url('/')}}" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('/') }}" class="nav__menu-link nav__menu-link">
                                             Home
                                         </a>
                                     </li>
@@ -139,12 +142,12 @@
                                         </ul> --}}
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{ url('blog') }}" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('blog/Posts') }}" class="nav__menu-link nav__menu-link">
                                             Blog
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('members/Members') }}" class="nav__menu-link nav__menu-link">
                                             Members
                                         </a>
                                     </li>
@@ -154,7 +157,7 @@
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('gallery') }}" class="nav__menu-link nav__menu-link">
                                             Gallery
                                         </a>
                                     </li>
@@ -240,9 +243,11 @@
                                 </div>
                             </div>
                             <div class="nav__uncollapsed">
-                                <div class="nav__uncollapsed-item d-none d-md-flex">
+                                <div class="nav__uncollapsed-item gap-2 d-md-flex">
                                     {{-- <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a> --}}
-                                    <a href="sign-up.html" class="cmn-button">Sign Up</a>
+                                    {{-- <a href="sign-up.html" class="cmn-button">Sign Up</a> --}}
+
+                                    <p>VI</p><i class="fas fa-chevron-down"></i>
                                 </div>
                                 <button class="nav__bar d-block d-xl-none">
                                     <span class="icon-bar top-bar"></span>
@@ -263,14 +268,15 @@
 
 
     <!-- ==== footer start ==== -->
-    <footer class="footer">
+    <footer class="footer" style="background-color: rgba(12, 169, 64, 0.05);">
         <div class="container">
             <div class="row section__row">
                 <div class="col-md-6 col-lg-4 col-xl-3 section__col">
                     <div class="footer__single">
-                        <a href="index.html" class="footer__single-logo">
-                            <img src="{{asset('Frontend/images/logo-light.png')}}" alt="Logo" />
-                        </a>
+                        {{-- <a href="index.html" class="footer__single-logo">
+                            <img src="{{ asset('Frontend/images/logo-light.png') }}" alt="Logo" />
+                        </a> --}}
+                        
                         <div class="footer__single-content">
                             <p>
                                 Lorem Ipsum is simply dummy text of the
@@ -299,16 +305,13 @@
                         <h5>Quick Links</h5>
                         <div class="footer__single-content">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Trang chủ</a></li>
                                 <li>
-                                    <a href="about-us.html">About Us</a>
+                                    <a href="facility.html">Dịch vụ</a>
                                 </li>
+                                <li><a href="shop.html">Liên hệ</a></li>
                                 <li>
-                                    <a href="facility.html">Facility</a>
-                                </li>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li>
-                                    <a href="contact-us.html">Contact</a>
+                                    <a href="contact-us.html">Đăng ký tư vấn</a>
                                 </li>
                             </ul>
                         </div>
@@ -319,23 +322,23 @@
                         <h5>Address</h5>
                         <div class="footer__single-content">
                             <div class="footer__single-content__group">
-                                <p>(480) 555-0103</p>
-                                <p>(406) 555-0120</p>
+                                <p>079 567 1476</p>
+                                <p>079 567 1476</p>
                             </div>
                             <div class="footer__single-content__group">
                                 <p>
                                     <a href="https://pixner.net/cdn-cgi/l/email-protection" class="__cf_email__"
-                                        data-cfemail="721617131c1c135c110700061b0132170a131f021e175c111d1f">[email&#160;protected]</a>
+                                        data-cfemail="721617131c1c135c110700061b0132170a131f021e175c111d1f">sunshinegolfclub@gmail.com</a>
                                 </p>
                                 <p>
                                     <a href="https://pixner.net/cdn-cgi/l/email-protection" class="__cf_email__"
-                                        data-cfemail="1c78797e6e7d32747370685c79647d716c7079327f7371">[email&#160;protected]</a>
+                                        data-cfemail="1c78797e6e7d32747370685c79647d716c7079327f7371">ssgc@gmail.com</a>
                                 </p>
                             </div>
                             <div class="footer__single-content__group">
                                 <p>
-                                    285 Great North Road, Grey Lynn,
-                                    Auckland 1021
+                                    264 Đội Cấn, Liễu Giai, Ba Đình,
+                                    Hà Nội
                                 </p>
                             </div>
                         </div>
@@ -393,6 +396,10 @@
             </div>
         </div>
     </footer>
+
+
+
+
     <!-- ==== / footer end ==== -->
 
     <!-- scroll to top -->
@@ -434,9 +441,10 @@
     <script src="{{ asset('Frontend/js/gallery.js') }}"></script>
     <script>
         $('.grid').masonry({
-            // options
+
             itemSelector: '.grid-item',
-            columnWidth: 200
+            columnWidth: 200,
+            gutter: 20
         });
     </script>
 </body>

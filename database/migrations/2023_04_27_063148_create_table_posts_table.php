@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('post_title',255);
+            $table->string('post_title', 255);
             $table->integer('cat_id');
-            $table->string('image',255);
+            $table->string('image', 255);
             $table->text('summary');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->tinyInteger('status');
             $table->tinyInteger('order');
-            $table->string('meta_keyword',255);
-            $table->string('meta_description',255);
+            $table->string('meta_keyword', 255);
+            $table->string('meta_description', 255);
+            $table->string('slug', 255);
             $table->integer('user_id')->nullable();
             $table->timestamp('date_public');
             $table->integer('view_count');

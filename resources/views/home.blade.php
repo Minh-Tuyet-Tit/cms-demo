@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('main')
-    
+
     <!-- ==== / header end ==== -->
 
     <!-- ==== banner section start ==== -->
@@ -32,7 +32,7 @@
     <!-- ==== / banner section end ==== -->
 
     <!-- ==== facility section start ==== -->
-    <section class="section facility wow fadeInUp" data-wow-duration="0.4s">
+    {{-- <section class="section facility wow fadeInUp" data-wow-duration="0.4s">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -180,8 +180,164 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- ==== / facility section end ==== -->
+
+    <section class="section related-news blog wow fadeInUp bg-white" data-wow-duration="0.4s">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section__header wow fadeInUp" data-wow-duration="0.4s">
+                        <h5 class="section__header-sub-title">Featured Posts</h5>
+                        <p>
+                            Golftio Sports Club is a golf club with a
+                            history that goes back to XX century. From a
+                            cricket club to soccer tournaments,
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center section__row">
+                <div class="col-sm-10 col-md-12 section__col">
+                    <div class="related-news__slider">
+
+                        <div class="blog-single">
+                            <div class="blog__thumb">
+                                <a href="" title="Read More">
+                                    <img src="{{ asset('Frontend/images/blog/one.png') }}" alt="Blog">
+                                </a>
+                            </div>
+                            <div class="blog__content">
+                                <h5>
+                                    <a href="" title="Read More">Hé lộ 4 bước lựa
+                                        chọn quần áo golf phù hợp nhất với golfer</a>
+                                </h5>
+                                <div class="blog__content-meta">
+                                    <p><i class="golftio-user"></i> Admin</p>
+                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                </div>
+                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
+                                    cùng quan trọng, nó góp phần... </p>
+
+                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
+                            </div>
+                        </div>
+                        <div class="blog-single">
+                            <div class="blog__thumb">
+                                <a href="" title="Read More">
+                                    <img src="{{ asset('Frontend/images/blog/two.png') }}" alt="Blog">
+                                </a>
+                            </div>
+                            <div class="blog__content">
+                                <h5>
+                                    <a href="" title="Read More">Hé lộ 4 bước lựa
+                                        chọn quần áo golf phù hợp nhất với golfer</a>
+                                </h5>
+                                <div class="blog__content-meta">
+                                    <p><i class="golftio-user"></i> Admin</p>
+                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                </div>
+                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
+                                    cùng quan trọng, nó góp phần... </p>
+
+                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
+                            </div>
+                        </div>
+                        <div class="blog-single">
+                            <div class="blog__thumb">
+                                <a href="" title="Read More">
+                                    <img src="{{ asset('Frontend/images/blog/three.png') }}" alt="Blog">
+                                </a>
+                            </div>
+                            <div class="blog__content">
+                                <h5>
+                                    <a href="" title="Read More">Hé lộ 4 bước lựa
+                                        chọn quần áo golf phù hợp nhất với golfer</a>
+                                </h5>
+                                <div class="blog__content-meta">
+                                    <p><i class="golftio-user"></i> Admin</p>
+                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                </div>
+                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
+                                    cùng quan trọng, nó góp phần... </p>
+
+                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
+                            </div>
+                        </div>
+                        <div class="blog-single">
+                            <div class="blog__thumb">
+                                <a href="" title="Read More">
+                                    <img src="{{ asset('Frontend/images/blog/four.png') }}" alt="Blog">
+                                </a>
+                            </div>
+                            <div class="blog__content">
+                                <h5>
+                                    <a href="" title="Read More">Hé lộ 4 bước lựa
+                                        chọn quần áo golf phù hợp nhất với golfer</a>
+                                </h5>
+                                <div class="blog__content-meta">
+                                    <p><i class="golftio-user"></i> Admin</p>
+                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                </div>
+                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
+                                    cùng quan trọng, nó góp phần... </p>
+
+                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
+                            </div>
+                        </div>
+                        <div class="blog-single">
+                            <div class="blog__thumb">
+                                <a href="" title="Read More">
+                                    <img src="{{ asset('Frontend/images/blog/five.png') }}" alt="Blog">
+                                </a>
+                            </div>
+                            <div class="blog__content">
+                                <h5>
+                                    <a href="" title="Read More">Hé lộ 4 bước lựa
+                                        chọn quần áo golf phù hợp nhất với golfer</a>
+                                </h5>
+                                <div class="blog__content-meta">
+                                    <p><i class="golftio-user"></i> Admin</p>
+                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                </div>
+                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
+                                    cùng quan trọng, nó góp phần... </p>
+
+                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5" style="height: 0">
+                <div class="col-12">
+                    <div class="section__header--secondary">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="section__header--secondary__cta">
+                                    <div class="slider-navigation justify-content-lg-center">
+                                        <button class="next-news cmn-button cmn-button--secondary">
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </button>
+                                        <button class="prev-news cmn-button cmn-button--secondary">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- ==== about section start ==== -->
     <section class="section about--secondary wow fadeInUp" data-wow-duration="0.4s">
@@ -268,467 +424,6 @@
     </section>
     <!-- ==== / about section end ==== -->
 
-    <!-- ==== pricing section start ==== -->
-    {{-- <section class="section pricing pricing--secondary wow fadeInUp" data-wow-duration="0.4s">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="section__header">
-                        <h5 class="section__header-sub-title">
-                            Pricing Plan
-                        </h5>
-                        <h2 class="section__header-title">
-                            Our exclusive offer
-                        </h2>
-                        <p>
-                            Golftio Sports Club is a golf club with a
-                            history that goes back to XX century. From a
-                            cricket club to soccer tournaments,
-                        </p>
-                        <div class="toggle-plan toggle-plan-alt">
-                            <a href="#plan-monthly" class="plan-toggle plan-active">Per Month</a>
-                            <a href="#plan-yearly" class="plan-toggle">Per Year</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="plan-table" id="plan-monthly">
-                        <div class="row justify-content-center section__row">
-                            <div class="col-sm-10 col-md-6 col-lg-4 section__col">
-                                <div class="pricing__card">
-                                    <div class="pricing__card-head">
-                                        <div class="pricing__card-head__thumb">
-                                            <i class="golftio-shot-down"></i>
-                                        </div>
-                                        <h2>
-                                            <span class="primary-text">$</span>59<span class="primary-text">/Mo</span>
-                                        </h2>
-                                        <h5>Junior</h5>
-                                        <p class="secondary-text">
-                                            Persons aged 18 and under.
-                                        </p>
-                                        <hr />
-                                    </div>
-                                    <div class="pricing__card-body">
-                                        <ul>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Weekday
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>9 hole course
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>10% Discount
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>One-time free training
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>100 free balls per day
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Course and facility access
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing__card-cta">
-                                        <a href="join-club.html" class="cmn-button">Get Membership</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-10 col-md-6 col-lg-4 section__col">
-                                <div class="pricing__card pricing__card--active">
-                                    <div class="pricing__card-head">
-                                        <div class="pricing__card-head__thumb">
-                                            <i class="golftio-shot-upper"></i>
-                                        </div>
-                                        <h2>
-                                            <span class="primary-text">$</span>99<span class="primary-text">/Mo</span>
-                                        </h2>
-                                        <h5>Intermediate</h5>
-                                        <p class="secondary-text">
-                                            For adults over 25 years.
-                                        </p>
-                                        <hr />
-                                    </div>
-                                    <div class="pricing__card-body">
-                                        <ul>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Weekend Seasonal
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>18 hole course
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>15% Discount
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>3+ free training
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>200 free balls per day
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Course and facility access
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing__card-cta">
-                                        <a href="join-club.html" class="cmn-button cmn-button--secondary">Get
-                                            Membership</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-10 col-md-6 col-lg-4 section__col">
-                                <div class="pricing__card">
-                                    <div class="pricing__card-head">
-                                        <div class="pricing__card-head__thumb">
-                                            <i class="golftio-shot-ground"></i>
-                                        </div>
-                                        <h2>
-                                            <span class="primary-text">$</span>199<span
-                                                class="primary-text">/Mo</span>
-                                        </h2>
-                                        <h5>Professional</h5>
-                                        <p class="secondary-text">
-                                            For adults over 30+ years.
-                                        </p>
-                                        <hr />
-                                    </div>
-                                    <div class="pricing__card-body">
-                                        <ul>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Weekday
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>30 hole course
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>30% Discount
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>5+ free training
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>500 free balls per day
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Course and facility access
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing__card-cta">
-                                        <a href="join-club.html" class="cmn-button">Get Membership</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="plan-table" id="plan-yearly">
-                        <div class="row justify-content-center section__row">
-                            <div class="col-sm-10 col-md-6 col-lg-4 section__col">
-                                <div class="pricing__card">
-                                    <div class="pricing__card-head">
-                                        <div class="pricing__card-head__thumb">
-                                            <i class="golftio-shot-down"></i>
-                                        </div>
-                                        <h2>
-                                            <span class="primary-text">$</span>239<span
-                                                class="primary-text">/Mo</span>
-                                        </h2>
-                                        <h5>Junior</h5>
-                                        <p class="secondary-text">
-                                            Persons aged 18 and under.
-                                        </p>
-                                        <hr />
-                                    </div>
-                                    <div class="pricing__card-body">
-                                        <ul>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Weekday
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>9 hole course
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>10% Discount
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>One-time free training
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>100 free balls per day
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Course and facility access
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing__card-cta">
-                                        <a href="join-club.html" class="cmn-button">Get Membership</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-10 col-md-6 col-lg-4 section__col">
-                                <div class="pricing__card pricing__card--active">
-                                    <div class="pricing__card-head">
-                                        <div class="pricing__card-head__thumb">
-                                            <i class="golftio-shot-upper"></i>
-                                        </div>
-                                        <h2>
-                                            <span class="primary-text">$</span>499<span
-                                                class="primary-text">/Mo</span>
-                                        </h2>
-                                        <h5>Intermediate</h5>
-                                        <p class="secondary-text">
-                                            For adults over 25 years.
-                                        </p>
-                                        <hr />
-                                    </div>
-                                    <div class="pricing__card-body">
-                                        <ul>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Weekend Seasonal
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>18 hole course
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>15% Discount
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>3+ free training
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>200 free balls per day
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Course and facility access
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing__card-cta">
-                                        <a href="join-club.html" class="cmn-button cmn-button--secondary">Get
-                                            Membership</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-10 col-md-6 col-lg-4 section__col">
-                                <div class="pricing__card">
-                                    <div class="pricing__card-head">
-                                        <div class="pricing__card-head__thumb">
-                                            <i class="golftio-shot-ground"></i>
-                                        </div>
-                                        <h2>
-                                            <span class="primary-text">$</span>699<span
-                                                class="primary-text">/Mo</span>
-                                        </h2>
-                                        <h5>Professional</h5>
-                                        <p class="secondary-text">
-                                            For adults over 30+ years.
-                                        </p>
-                                        <hr />
-                                    </div>
-                                    <div class="pricing__card-body">
-                                        <ul>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Weekday
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>30 hole course
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>30% Discount
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>5+ free training
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>500 free balls per day
-                                            </li>
-                                            <li class="secondary-text">
-                                                <i class="golftio-pin-checked"></i>Course and facility access
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing__card-cta">
-                                        <a href="join-club.html" class="cmn-button">Get Membership</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- ==== / pricing section end ==== -->
-
-    <!-- ==== our club section start ==== -->
-    <section class="section club--secondary">
-        <div class="container">
-            <div class="row section__row align-items-center">
-                <div class="col-lg-6 section__col">
-                    <div class="section__content">
-                        <h5 class="section__content-sub-title">Our Club</h5>
-                        <h2 class="section__content-title">
-                            Do you want to be a professional golfer?
-                        </h2>
-                        <p class="section__content-text">
-                            We offer a lot of courses of varying difficulty
-                            and beautiful scenery that golfers of all skill
-                            levels can enjoy. You will learn golf from
-                            professionals with our competent and experienced
-                            staff. You will have a great fun with our
-                            magnificent illuminated field.
-                        </p>
-                        <div class="section__content-cta">
-                            <a href="join-club.html" class="cmn-button">Join Our Club</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 section__col d-none d-lg-block">
-                    <div class="club--secondary__thumb wow fadeInUp" data-wow-duration="0.4s">
-                        <img src="{{ asset('Frontend/images/club-thumb-two.png') }}" alt="Image" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==== / our club section end ==== -->
-
-    <!-- ==== training section start ==== -->
-    <section class="section training training--secondary">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="section__header wow fadeInUp" data-wow-duration="0.4s">
-                        <h5 class="section__header-sub-title">Trainings</h5>
-                        <h2 class="section__header-title">
-                            We provide professional golf training
-                        </h2>
-                        <p>
-                            Golftio Sports Club is a golf club with a
-                            history that goes back to XX century. From a
-                            cricket club to soccer tournaments,
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-10 col-md-12">
-                    <div class="training__slider--secondary">
-                        <div class="training__slider-single">
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-down"></i>
-                            </div>
-                            <div class="training__slider-single__content">
-                                <h5>
-                                    <a href="training-details.html">Body Position</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    We teach you how to get the right body
-                                    position....
-                                </p>
-                                <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                            </div>
-                        </div>
-                        <div class="training__slider-single">
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-upper"></i>
-                            </div>
-                            <div class="training__slider-single__content">
-                                <h5>
-                                    <a href="training-details.html">Body Rotation</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    We teach you how to get the right body
-                                    position....
-                                </p>
-                                <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                            </div>
-                        </div>
-                        <div class="training__slider-single">
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-done"></i>
-                            </div>
-                            <div class="training__slider-single__content">
-                                <h5>
-                                    <a href="training-details.html">Chip Shot</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    We teach you how to get the right body
-                                    position....
-                                </p>
-                                <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                            </div>
-                        </div>
-                        <div class="training__slider-single">
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-down"></i>
-                            </div>
-                            <div class="training__slider-single__content">
-                                <h5>
-                                    <a href="training-details.html">Body Position</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    We teach you how to get the right body
-                                    position....
-                                </p>
-                                <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                            </div>
-                        </div>
-                        <div class="training__slider-single">
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-upper"></i>
-                            </div>
-                            <div class="training__slider-single__content">
-                                <h5>
-                                    <a href="training-details.html">Body Rotation</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    We teach you how to get the right body
-                                    position....
-                                </p>
-                                <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                            </div>
-                        </div>
-                        <div class="training__slider-single">
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-done"></i>
-                            </div>
-                            <div class="training__slider-single__content">
-                                <h5>
-                                    <a href="training-details.html">Chip Shot</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    We teach you how to get the right body
-                                    position....
-                                </p>
-                                <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="slider-navigation">
-                        <button class="next-training--secondary cmn-button cmn-button--secondary">
-                            <i class="fa-solid fa-angle-left"></i>
-                        </button>
-                        <button class="prev-training--secondary cmn-button cmn-button--secondary">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==== / training section end ==== -->
-
     <!-- ==== event section start ==== -->
     <section class="section event wow fadeInUp" data-wow-duration="0.4s">
         <div class="container">
@@ -744,7 +439,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="section__header--secondary__cta">
-                                    <a href="event.html" class="cmn-button">See All Event</a>
+                                    <a href="" class="cmn-button">See All Event</a>
                                 </div>
                             </div>
                         </div>
@@ -801,54 +496,11 @@
     </section>
     <!-- ==== / event section end ==== -->
 
-    <!-- ==== join club section start ==== -->
-    <section class="section join-club join-club--secondary wow fadeInUp" data-wow-duration="0.4s">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section__content">
-                        <h5 class="section__content-sub-title">
-                            Join Club
-                        </h5>
-                        <h2 class="section__content-title">
-                            Join our club
-                        </h2>
-                        <div class="join-club__form">
-                            <form action="#" method="post" name="joinClubForm">
-                                <div class="input-group">
-                                    <div class="input-single">
-                                        <input type="text" name="user-name" id="userName" required
-                                            placeholder="Your Name *" />
-                                    </div>
-                                    <div class="input-single">
-                                        <input type="text" name="user-phone" id="userPhone" required
-                                            placeholder="Your Phone *" />
-                                    </div>
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-single">
-                                        <input type="email" name="user-email" id="userEmail" required
-                                            placeholder="Your Email *" />
-                                    </div>
-                                    <div class="input-single">
-                                        <input type="text" name="user-url" id="userUrl"
-                                            placeholder="Website URL " />
-                                    </div>
-                                </div>
-                                <div class="input-single">
-                                    <textarea name="user-message" id="userMessage" placeholder="Message"></textarea>
-                                </div>
-                                <button type="submit" class="cmn-button">
-                                    Submit Now
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==== / join club section end ==== -->
+
+
+
+
+
 
     <!-- ==== team section start ==== -->
     <section class="section team wow fadeInUp" data-wow-duration="0.4s">
@@ -1070,217 +722,54 @@
     </section>
     <!-- ==== / team section end ==== -->
 
-    <!-- ==== testimonial section start ==== -->
-    <section class="section testimonial testimonial--secondary wow fadeInUp" data-wow-duration="0.4s">
+
+    <!-- ==== gallery section start ==== -->
+    <div class="section gallery wow fadeInUp" data-wow-duration="0.4s">
         <div class="container">
-            <div class="row align-items-center section__row">
-                <div class="col-lg-6 col-xxl-6 section__col">
-                    <div class="section__content">
-                        <h5 class="section__content-sub-title">
-                            Blogs
-                        </h5>
-                        <h2 class="section__content-title">
-                            Our Members Thinking About Us
-                        </h2>
-                        <p class="section__content-text">
-                            Our professional team will make sure that you
-                            find the right course and the best trainer to
-                            receive maximum efficiency. All our trainers are
-                            professional golf players with the highest...
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section__header wow fadeInUp" data-wow-duration="0.4s">
+                        <h5 class="section__header-sub-title">Gallery</h5>
+                        <p>
+                            Golftio Sports Club is a golf club with a
+                            history that goes back to XX century. From a
+                            cricket club to soccer tournaments,
                         </p>
-                        <div class="section__content-cta">
-                            <a href="join-club.html" class="cmn-button">Join Our Club</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row section__row align-items-center">
+                <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
+                    <div class="gallery__thumb">
+                        <div class="gallery__thumb-single">
+                            <img src="{{ asset('Frontend/images/gallery/one.png') }}" alt="Image">
+                        </div>
+                        <div class="gallery__thumb-single">
+                            <img src="{{ asset('Frontend/images/gallery/two.png') }}" alt="Image">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xxl-5 offset-xxl-1 section__col">
-                    <div class="testimonial__slider--secondary">
-                        <div class="testimonial__slider-card">
-                            <div class="testimonial__slider-card__body">
-                                <div class="quotation">
-                                    <i class="golftio-quote"></i>
-                                </div>
-                                <div class="testimonial__slider-card__body-review">
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                </div>
-                                <p>
-                                    There are many variations of passages of
-                                    Lorem Ipsum available, but the majority
-                                    have suffered alteration in
-                                </p>
-                            </div>
-                            <div class="testimonial__slider-card__author">
-                                <div class="testimonial__slider-card__author-thumb">
-                                    <img src="{{ asset('Frontend/images/testimonial/one.png') }}" alt="Image" />
-                                </div>
-                                <div class="testimonial__slider-card__author-info">
-                                    <h6>Jenelia D'suza</h6>
-                                    <p class="secondary-text">Student</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial__slider-card">
-                            <div class="testimonial__slider-card__body">
-                                <div class="quotation">
-                                    <i class="golftio-quote"></i>
-                                </div>
-                                <div class="testimonial__slider-card__body-review">
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                </div>
-                                <p>
-                                    There are many variations of passages of
-                                    Lorem Ipsum available, but the majority
-                                    have suffered alteration in
-                                </p>
-                            </div>
-                            <div class="testimonial__slider-card__author">
-                                <div class="testimonial__slider-card__author-thumb">
-                                    <img src="{{ asset('Frontend/images/testimonial/two.png') }}" alt="Image" />
-                                </div>
-                                <div class="testimonial__slider-card__author-info">
-                                    <h6>Sarika Paleccha</h6>
-                                    <p class="secondary-text">Player</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial__slider-card">
-                            <div class="testimonial__slider-card__body">
-                                <div class="quotation">
-                                    <i class="golftio-quote"></i>
-                                </div>
-                                <div class="testimonial__slider-card__body-review">
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                </div>
-                                <p>
-                                    There are many variations of passages of
-                                    Lorem Ipsum available, but the majority
-                                    have suffered alteration in
-                                </p>
-                            </div>
-                            <div class="testimonial__slider-card__author">
-                                <div class="testimonial__slider-card__author-thumb">
-                                    <img src="{{ asset('Frontend/images/testimonial/three.png') }}" alt="Image" />
-                                </div>
-                                <div class="testimonial__slider-card__author-info">
-                                    <h6>Brad Hogds</h6>
-                                    <p class="secondary-text">
-                                        Junior Player
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial__slider-card">
-                            <div class="testimonial__slider-card__body">
-                                <div class="quotation">
-                                    <i class="golftio-quote"></i>
-                                </div>
-                                <div class="testimonial__slider-card__body-review">
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                </div>
-                                <p>
-                                    There are many variations of passages of
-                                    Lorem Ipsum available, but the majority
-                                    have suffered alteration in
-                                </p>
-                            </div>
-                            <div class="testimonial__slider-card__author">
-                                <div class="testimonial__slider-card__author-thumb">
-                                    <img src="{{ asset('Frontend/images/testimonial/one.png') }}" alt="Image" />
-                                </div>
-                                <div class="testimonial__slider-card__author-info">
-                                    <h6>Jenelia D'suza</h6>
-                                    <p class="secondary-text">Student</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial__slider-card">
-                            <div class="testimonial__slider-card__body">
-                                <div class="quotation">
-                                    <i class="golftio-quote"></i>
-                                </div>
-                                <div class="testimonial__slider-card__body-review">
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                </div>
-                                <p>
-                                    There are many variations of passages of
-                                    Lorem Ipsum available, but the majority
-                                    have suffered alteration in
-                                </p>
-                            </div>
-                            <div class="testimonial__slider-card__author">
-                                <div class="testimonial__slider-card__author-thumb">
-                                    <img src="{{ asset('Frontend/images/testimonial/two.png') }}" alt="Image" />
-                                </div>
-                                <div class="testimonial__slider-card__author-info">
-                                    <h6>Sarika Paleccha</h6>
-                                    <p class="secondary-text">Player</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial__slider-card">
-                            <div class="testimonial__slider-card__body">
-                                <div class="quotation">
-                                    <i class="golftio-quote"></i>
-                                </div>
-                                <div class="testimonial__slider-card__body-review">
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                    <i class="golftio-star"></i>
-                                </div>
-                                <p>
-                                    There are many variations of passages of
-                                    Lorem Ipsum available, but the majority
-                                    have suffered alteration in
-                                </p>
-                            </div>
-                            <div class="testimonial__slider-card__author">
-                                <div class="testimonial__slider-card__author-thumb">
-                                    <img src="{{ asset('Frontend/images/testimonial/three.png') }}" alt="Image" />
-                                </div>
-                                <div class="testimonial__slider-card__author-info">
-                                    <h6>Brad Hogds</h6>
-                                    <p class="secondary-text">
-                                        Junior Player
-                                    </p>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-xl-4 section__col d-none d-lg-block">
+                    <div class="gallery__thumb">
+                        <div class="gallery__thumb-single">
+                            <img src="{{ asset('Frontend/images/gallery/three.png') }}" alt="Image">
                         </div>
                     </div>
-                    <div class="slider-navigation justify-content-lg-end">
-                        <button class="next-testimonial--secondary cmn-button cmn-button--secondary">
-                            <i class="fa-solid fa-angle-left"></i>
-                        </button>
-                        <button class="prev-testimonial--secondary cmn-button cmn-button--secondary">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </button>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
+                    <div class="gallery__thumb">
+                        <div class="gallery__thumb-single">
+                            <img src="{{ asset('Frontend/images/gallery/four.png') }}" alt="Image">
+                        </div>
+                        <div class="gallery__thumb-single">
+                            <img src="{{ asset('Frontend/images/gallery/five.png') }}" alt="Image">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ==== / testimonial section end ==== -->
+    </div>
+    <!-- ==== / gallery section end ==== -->
+
 
 @stop
-

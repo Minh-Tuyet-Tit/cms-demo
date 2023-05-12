@@ -85,9 +85,13 @@ class PostsController extends Controller
     public function edit(Request $request, $id)
     {
 
-        $status = Status::all();
-        $post = Posts::findOrFail($id);
-        $category = CategoryPost::all();
+        try {
+            $status = Status::all();
+            $post = Posts::findOrFail($id);
+            $category = CategoryPost::all();
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('fail', 'Error');
+        }
         return view('Admin.pages.Posts.Update', compact('request', 'status', 'post', 'category'));
     }
 
@@ -112,13 +116,12 @@ class PostsController extends Controller
         ];
         $request->validate($rules, $message);
 
-        $post = Posts::findOrFail($id);
-
-
-
-
-
-        $post->update($request->all());
+        try {
+            $post = Posts::findOrFail($id);
+            $post->update($request->all());
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('fail', 'Posts update fail');
+        }
 
         return redirect(url('admin/post'))->with('success', 'Posts update successfully');
     }

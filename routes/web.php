@@ -15,10 +15,12 @@ Route::get('/language/{lang}', [App\Http\Controllers\LanguageControler::class, '
 Route::prefix('/')->group(function () {
     Route::get('/', [App\Http\Controllers\Controller::class, 'index']);
 
-    Route::get('/blog', [App\Http\Controllers\Controller::class, 'blog']);
-
+    Route::get('/blog/{slug}', [App\Http\Controllers\Controller::class, 'blog']);
 
     Route::get('/blog-detail/{id}', [App\Http\Controllers\Controller::class, 'blog_detail']);
+
+    Route::get('/gallery', [App\Http\Controllers\Controller::class, 'gallery']);
+    Route::get('/members/{slug}', [App\Http\Controllers\Controller::class, 'members']);
 });
 
 
@@ -26,10 +28,6 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     // dashboard
     Route::get('/', function (Request $request) {
-        // if (Auth::user()) {
-        //     return redirect('admin');
-        // }
-
         return view('Admin.pages.Home', compact('request'));
     })->name('home.index');
 

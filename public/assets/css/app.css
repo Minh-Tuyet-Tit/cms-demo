@@ -1,3 +1,7 @@
+:root {
+    --primary-color: #e6602c;
+}
+
 .blog-single .blog__thumb {
     height: 300px;
     overflow: hidden;
@@ -47,4 +51,62 @@
 
 td img {
     width: 100%;
+}
+
+.training__slider-single__thumb {
+    height: 300px;
+}
+
+.training__slider-single__thumb a {
+    height: 100%;
+}
+
+.training__slider-single__thumb a img {
+    height: 100%;
+}
+
+.cmn-button::before,
+.cmn-button::after {
+    background-color: var(--primary-color) !important;
+    /* background: #FFFFFF !important; */
+}
+
+.cmn-button--secondary {
+    background-color: #ffffff !important;
+    border: 1px solid #b6b6b6;
+    border-radius: 8px;
+}
+
+.banner__content-sub-title,
+.section__header-sub-title,
+.section__content-sub-title,
+.section__header--secondary__content h5 {
+    color: var(--primary-color) !important;
+}
+
+.event__single-content h3 {
+    background-color: #333333 !important;
+}
+
+
+.footer{
+    background-color: rgba(12, 169, 64, 0.05);
+}
+
+.footer a,
+.footer p,
+.footer i,
+.footer h5 {
+    
+    color: #000000 !important;
+}
+
+.footer input{
+    background-color: transparent;
+    border: 1px solid #E3E3E3;
+}
+
+.footer button{
+    background-color: var(--primary-color);
+    color: white;
 }

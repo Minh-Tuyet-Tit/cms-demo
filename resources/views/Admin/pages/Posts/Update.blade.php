@@ -124,9 +124,9 @@
                             <!-- select -->
                             <div class="form-group">
                                 <label>Category</label>
-                                <select name="catPro_id" class="form-control">
+                                <select name="cat_id" class="form-control">
                                     @foreach ($category as $cate)
-                                        <option value="{{ $cate->id }}">{{ $cate->cat_name }}</option>
+                                        <option {{$cate->id==$post->cat_id ?'selected':''}} value="{{ $cate->id }}">{{ $cate->cat_name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -137,7 +137,7 @@
                                 <label>Status</label>
                                 <select name="status" class="form-control">
                                     @foreach ($status as $st)
-                                        <option value="{{ $st->id }}">{{ $st->status_name }}</option>
+                                        <option {{$st->id == $post->status ? 'selected':''}} value="{{ $st->id }}">{{ $st->status_name }}</option>
                                     @endforeach
                                 </select>
                             </div>

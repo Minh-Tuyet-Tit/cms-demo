@@ -15,4 +15,9 @@ class CategoryPost extends Model
         return
         $this->hasOne(Status::class, 'id', 'status');
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Posts::class);
+    }
 }
