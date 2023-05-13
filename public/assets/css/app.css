@@ -2,6 +2,13 @@
     --primary-color: #e6602c;
 }
 
+
+
+.nav__logo img{
+    max-width: 100px;
+}
+
+
 .blog-single .blog__thumb {
     height: 300px;
     overflow: hidden;
@@ -88,6 +95,10 @@ td img {
     background-color: #333333 !important;
 }
 
+.about--secondary__thumb-experience{
+    background-color: var(--primary-color) !important;
+}
+
 
 .footer{
     background-color: rgba(12, 169, 64, 0.05);
@@ -109,4 +120,14 @@ td img {
 .footer button{
     background-color: var(--primary-color);
     color: white;
+}
+
+
+.slick-arrow i{
+    color: var(--primary-color) !important;
+}
+
+
+.slick-arrow:hover i{
+    color: white !important;
 }

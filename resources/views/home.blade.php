@@ -458,13 +458,13 @@
                             <h3>
                                 13 <span class="primary-text">Nov</span>
                             </h3>
-                            <p>Friday at 10:00 am</p>
+                            {{-- <p>Friday at 10:00 am</p>
                             <h5>Master Class</h5>
                             <p class="secondary-text">
                                 <i class="golftio-location"></i> Parker Rd.
                                 Allentown, 31134
                             </p>
-                            <p>Free</p>
+                            <p>Free</p> --}}
                             <a href="sign-up.html" class="cmn-button">Join Now</a>
                         </div>
                     </div>
@@ -480,13 +480,13 @@
                             <h3>
                                 27 <span class="primary-text">Nov</span>
                             </h3>
-                            <p>Saturday at 04:00 pm</p>
+                            {{-- <p>Saturday at 04:00 pm</p>
                             <h5>Golf Championship</h5>
                             <p class="secondary-text">
                                 <i class="golftio-location"></i> Parker Rd.
                                 Allentown, 31134
                             </p>
-                            <p>$40.00</p>
+                            <p>$40.00</p> --}}
                             <a href="sign-up.html" class="cmn-button">Join Now</a>
                         </div>
                     </div>

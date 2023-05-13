@@ -269,15 +269,12 @@
 
 
     <!-- ==== footer start ==== -->
-    <footer class="footer" style="background-color: rgba(12, 169, 64, 0.05);">
+    <footer class="footer" >
         <div class="container">
-            <div class="row section__row">
+            {{-- <div class="row section__row">
                 <div class="col-md-6 col-lg-4 col-xl-3 section__col">
                     <div class="footer__single">
-                        {{-- <a href="index.html" class="footer__single-logo">
-                            <img src="{{ asset('Frontend/images/logo-light.png') }}" alt="Logo" />
-                        </a> --}}
-                        
+                       
                         <div class="footer__single-content">
                             <p>
                                 Lorem Ipsum is simply dummy text of the
@@ -365,31 +362,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <hr />
             <div class="row">
                 <div class="col-12">
                     <div class="copyright">
                         <div class="row align-items-center">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12 text-center">
                                 <p>
                                     Copyright &copy;
-                                    <span id="copyYear"></span> Golftio. All
-                                    Rights Reserved
+                                    <span id="copyYear"></span> LSD Technology
                                 </p>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li>
-                                        <a href="support.html">Support</a>
-                                    </li>
-                                    <li>
-                                        <a href="terms-conditions.html">Terms of Use</a>
-                                    </li>
-                                    <li>
-                                        <a href="privacy-policy.html">Privacy Policy</a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
