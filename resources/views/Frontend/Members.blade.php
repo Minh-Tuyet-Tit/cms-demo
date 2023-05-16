@@ -28,121 +28,26 @@
                     <div class="col-md-6 col-xl-4 section__col">
                         <div class="training__slider-single">
                             <div class="training__slider-single__thumb">
-                                <a href="{{url('member-detail/'. $member->id)}}"><img src="{{ $member->image }}" alt="Image"></a>
+                                <a href="{{ url('member-detail/' . $member->id) }}"><img src="{{ $member->image }}"
+                                        alt="Image"></a>
                                 <div class="training__slider-single__thumb-small">
                                     <i class="golftio-shot-down"></i>
                                 </div>
                             </div>
                             <div class="training__slider-single__content">
-                                <h5><a href="{{url('member-detail/'. $member->id)}}">{{$member->post_title}}</a></h5>
+                                <h5><a href="{{ url('member-detail/' . $member->id) }}">{{ $member->post_title }}</a></h5>
                                 <p class="secondary-text">
-                                   <?=$member->summary?>
+                                    <?= $member->summary ?>
                                 </p>
-                                <a href="{{url('member-detail/'. $member->id)}}" class="cmn-button cmn-button--secondary">View more</a>
+                                <a href="{{ url('member-detail/' . $member->id) }}"
+                                    class="cmn-button cmn-button--secondary">View more</a>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                <div class="col-md-6 col-xl-4 section__col">
-                    <div class="training__slider-single">
-                        <div class="training__slider-single__thumb">
-                            <a href="training-details.html"><img src="{{ asset('Frontend/images/training/two.png') }}"
-                                    alt="Image"></a>
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-great-upper"></i>
-                            </div>
-                        </div>
-                        <div class="training__slider-single__content">
-                            <h5><a href="training-details.html">Body Rotation</a></h5>
-                            <p class="secondary-text">
-                                We teach you how to get the right body position in the
-                                strokes. You can contact us for any question you may have
-                                about this course.
-                            </p>
-                            <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-4 section__col">
-                    <div class="training__slider-single">
-                        <div class="training__slider-single__thumb">
-                            <a href="training-details.html"><img src="{{ asset('Frontend/images/training/grip.png') }}"
-                                    alt="Image"></a>
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-upper"></i>
-                            </div>
-                        </div>
-                        <div class="training__slider-single__content">
-                            <h5><a href="training-details.html">Correct Grip</a></h5>
-                            <p class="secondary-text">
-                                We teach you how to get the right body position in the
-                                strokes. You can contact us for any question you may have
-                                about this course.
-                            </p>
-                            <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-4 section__col">
-                    <div class="training__slider-single">
-                        <div class="training__slider-single__thumb">
-                            <a href="training-details.html"><img src="{{ asset('Frontend/images/training/three.png') }}"
-                                    alt="Image"></a>
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-upper"></i>
-                            </div>
-                        </div>
-                        <div class="training__slider-single__content">
-                            <h5><a href="training-details.html">Chip Shot</a></h5>
-                            <p class="secondary-text">
-                                We teach you how to get the right body position in the
-                                strokes. You can contact us for any question you may have
-                                about this course.
-                            </p>
-                            <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-4 section__col">
-                    <div class="training__slider-single">
-                        <div class="training__slider-single__thumb">
-                            <a href="training-details.html"><img src="{{ asset('Frontend/images/training/shot.png') }}"
-                                    alt="Image"></a>
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-great-upper"></i>
-                            </div>
-                        </div>
-                        <div class="training__slider-single__content">
-                            <h5><a href="training-details.html">Putt Shot</a></h5>
-                            <p class="secondary-text">
-                                We teach you how to get the right body position in the
-                                strokes. You can contact us for any question you may have
-                                about this course.
-                            </p>
-                            <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-4 section__col">
-                    <div class="training__slider-single">
-                        <div class="training__slider-single__thumb">
-                            <a href="training-details.html"><img src="{{ asset('Frontend/images/training/types.png') }}"
-                                    alt="Image"></a>
-                            <div class="training__slider-single__thumb-small">
-                                <i class="golftio-shot-upper"></i>
-                            </div>
-                        </div>
-                        <div class="training__slider-single__content">
-                            <h5><a href="training-details.html">Grip Types</a></h5>
-                            <p class="secondary-text">
-                                We teach you how to get the right body position in the
-                                strokes. You can contact us for any question you may have
-                                about this course.
-                            </p>
-                            <a href="training-details.html" class="cmn-button cmn-button--secondary">View more</a>
-                        </div>
-                    </div>
-                </div>
+
+
+
             </div>
             <div class="row">
                 <div class="col-12 justify-content-center section__cta">

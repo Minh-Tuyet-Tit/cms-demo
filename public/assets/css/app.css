@@ -78,6 +78,10 @@ td img {
     /* background: #FFFFFF !important; */
 }
 
+.cmn-button{
+    border: 1px solid var(--primary-color) !important;
+}
+
 .cmn-button--secondary {
     background-color: #ffffff !important;
     border: 1px solid #b6b6b6;

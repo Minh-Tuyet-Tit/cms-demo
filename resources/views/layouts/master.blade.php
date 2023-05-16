@@ -101,7 +101,7 @@
         </div>
     </div> --}}
 
-    <header class="header {{ $request->is('/') ? '' : 'header--secondary' }}">
+    <header class="header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -122,14 +122,14 @@
                                     </a>
                                 </div>
 
-                                <ul class="nav__menu-items">
+                                <ul class="nav__menu-items gap-4">
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('/') }}" class="nav__menu-link nav__menu-link">
                                             Home
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
+                                        <a href="{{url('/about')}}" class="nav__menu-link nav__menu-link">
                                             About us
                                         </a>
                                         {{-- <ul class="nav__dropdown">
@@ -162,70 +162,12 @@
                                             Gallery
                                         </a>
                                     </li>
-                                    {{-- <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="javascript:void(0)" class="nav__menu-link nav__menu-link--dropdown">
-                                            Pages
-                                        </a>
-                                        <ul class="nav__dropdown">
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="about-us.html">About
-                                                    Us</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="pricing.html">Pricing
-                                                    Plan</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="event.html">Event</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="faq.html">FAQ</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="gallery.html">Gallery</a>
-                                            </li>
 
-                                            <li class="nav__menu-link-child">
-                                                <a class="nav__dropdown-item nav__menu-link--dropdown nav__menu-link-childr"
-                                                    href="javascript:void(0)">Blog</a>
-                                                <ul class="nav__dropdown-child">
-                                                    <li>
-                                                        <a class="nav__dropdown-item hide-nav" href="blog.html">Blog
-                                                            Grid</a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="nav__dropdown-item hide-nav"
-                                                            href="blog-list.html">Blog List</a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="nav__dropdown-item hide-nav"
-                                                            href="blog-details.html">Blog Details</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="contact-us.html">Contact
-                                                    Us</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="join-club.html">Join
-                                                    Club</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="support.html">Support</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav"
-                                                    href="privacy-policy.html">Privacy Policy</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav__dropdown-item hide-nav" href="404.html">Error</a>
-                                            </li>
-                                        </ul>
-                                    </li> --}}
                                     <li class="nav__menu-item d-block d-md-none">
-                                        <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a>
-                                        <a href="sign-up.html" class="cmn-button">Sign Up</a>
+                                        {{-- <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a>
+                                        <a href="sign-up.html" class="cmn-button">Sign Up</a> --}}
+
+                                        <a href=""> VI<i class="fas fa-chevron-down"></i></a>
                                     </li>
                                 </ul>
                                 <div class="social">
@@ -245,10 +187,10 @@
                             </div>
                             <div class="nav__uncollapsed">
                                 <div class="nav__uncollapsed-item gap-2 d-md-flex">
-                                    {{-- <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a> --}}
-                                    {{-- <a href="sign-up.html" class="cmn-button">Sign Up</a> --}}
+                                    {{-- <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a>
+                                    <a href="sign-up.html" class="cmn-button">Sign Up</a> --}}
 
-                                    <p>VI</p><i class="fas fa-chevron-down"></i>
+                                    <a href="" style="color: #333"> VI<i style="font-size: 16px; color: #818181;" class="fas fa-chevron-down"></i></a>
                                 </div>
                                 <button class="nav__bar d-block d-xl-none">
                                     <span class="icon-bar top-bar"></span>
@@ -269,7 +211,7 @@
 
 
     <!-- ==== footer start ==== -->
-    <footer class="footer" >
+    <footer class="footer">
         <div class="container">
             {{-- <div class="row section__row">
                 <div class="col-md-6 col-lg-4 col-xl-3 section__col">
@@ -423,6 +365,7 @@
     <!-- main js -->
     <script src="{{ asset('Frontend/js/main.js') }}"></script>
     <script src="{{ asset('Frontend/js/gallery.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.all.min.js"></script>
     <script>
         $('.grid').masonry({
 
@@ -431,6 +374,27 @@
             gutter: 20
         });
     </script>
+
+
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'successful',
+                text: "{{ session('success') }}",
+            })
+        </script>
+    @endif
+
+    @if (session('fail'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'An error has occurred',
+                text: "{{ session('fail') }}",
+            })
+        </script>
+    @endif
 </body>
 
 

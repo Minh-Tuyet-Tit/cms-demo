@@ -22,7 +22,7 @@
                         </p>
                         <div class="banner__content-cta">
                             <a href="join-club.html" class="cmn-button">Join Our Club</a>
-                            <a href="about-us.html" class="cmn-button cmn-button--secondary">About Us</a>
+                            <a href="{{ url('/about') }}" class="cmn-button cmn-button--secondary">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -202,113 +202,28 @@
                 <div class="col-sm-10 col-md-12 section__col">
                     <div class="related-news__slider">
 
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="" title="Read More">
-                                    <img src="{{ asset('Frontend/images/blog/one.png') }}" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="" title="Read More">Hé lộ 4 bước lựa
-                                        chọn quần áo golf phù hợp nhất với golfer</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                        @foreach ($posts as $post)
+                            <div class="blog-single">
+                                <div class="blog__thumb">
+                                    <a href="{{url('blog-detail/'. $post->id)}}" title="Read More">
+                                        <img src="{{ $post->image }}" alt="Blog">
+                                    </a>
                                 </div>
-                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
-                                    cùng quan trọng, nó góp phần... </p>
+                                <div class="blog__content">
+                                    <h5>
+                                        <a href="{{url('blog-detail/'. $post->id)}}" title="Read More">{{$post->post_title}}</a>
+                                    </h5>
+                                    <div class="blog__content-meta">
+                                        <p><i class="golftio-user"></i> Admin</p>
+                                        <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                    </div>
+                                    <p><?= $post->summsry?></p>
 
-                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="" title="Read More">
-                                    <img src="{{ asset('Frontend/images/blog/two.png') }}" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="" title="Read More">Hé lộ 4 bước lựa
-                                        chọn quần áo golf phù hợp nhất với golfer</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
+                                    <a href="{{url('blog-detail/'. $post->id)}}" title="Read More" class="cmn-button cmn-button--secondary">Read
+                                        more</a>
                                 </div>
-                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
-                                    cùng quan trọng, nó góp phần... </p>
-
-                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
                             </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="" title="Read More">
-                                    <img src="{{ asset('Frontend/images/blog/three.png') }}" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="" title="Read More">Hé lộ 4 bước lựa
-                                        chọn quần áo golf phù hợp nhất với golfer</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
-                                </div>
-                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
-                                    cùng quan trọng, nó góp phần... </p>
-
-                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="" title="Read More">
-                                    <img src="{{ asset('Frontend/images/blog/four.png') }}" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="" title="Read More">Hé lộ 4 bước lựa
-                                        chọn quần áo golf phù hợp nhất với golfer</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
-                                </div>
-                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
-                                    cùng quan trọng, nó góp phần... </p>
-
-                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
-                        <div class="blog-single">
-                            <div class="blog__thumb">
-                                <a href="" title="Read More">
-                                    <img src="{{ asset('Frontend/images/blog/five.png') }}" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog__content">
-                                <h5>
-                                    <a href="" title="Read More">Hé lộ 4 bước lựa
-                                        chọn quần áo golf phù hợp nhất với golfer</a>
-                                </h5>
-                                <div class="blog__content-meta">
-                                    <p><i class="golftio-user"></i> Admin</p>
-                                    <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
-                                </div>
-                                <p> Trong môn thể thao golf, đồ golf, quần áo golf, thời trang golf là một yếu tố vô
-                                    cùng quan trọng, nó góp phần... </p>
-
-                                <a href="" title="Read More" class="cmn-button cmn-button--secondary">Read more</a>
-                            </div>
-                        </div>
-
-
+                        @endforeach
 
                     </div>
                 </div>
@@ -357,7 +272,7 @@
                             </p>
                         </div>
                         <div class="about--secondary__modal">
-                            <img src="assets/images/about-modal.png" alt="img" />
+                            <img src="{{ asset('Frontend/images/about-modal.png') }}" alt="img" />
                             <div class="play-wrapper">
                                 <a href="https://www.youtube.com/watch?v=RvreULjnzFo" target="_blank"
                                     title="Youtube Video Player" class="play-btn">
@@ -425,7 +340,7 @@
     <!-- ==== / about section end ==== -->
 
     <!-- ==== event section start ==== -->
-    <section class="section event wow fadeInUp" data-wow-duration="0.4s">
+    {{-- <section class="section event wow fadeInUp" data-wow-duration="0.4s">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -458,13 +373,6 @@
                             <h3>
                                 13 <span class="primary-text">Nov</span>
                             </h3>
-                            {{-- <p>Friday at 10:00 am</p>
-                            <h5>Master Class</h5>
-                            <p class="secondary-text">
-                                <i class="golftio-location"></i> Parker Rd.
-                                Allentown, 31134
-                            </p>
-                            <p>Free</p> --}}
                             <a href="sign-up.html" class="cmn-button">Join Now</a>
                         </div>
                     </div>
@@ -480,30 +388,21 @@
                             <h3>
                                 27 <span class="primary-text">Nov</span>
                             </h3>
-                            {{-- <p>Saturday at 04:00 pm</p>
-                            <h5>Golf Championship</h5>
-                            <p class="secondary-text">
-                                <i class="golftio-location"></i> Parker Rd.
-                                Allentown, 31134
-                            </p>
-                            <p>$40.00</p> --}}
+                            
                             <a href="sign-up.html" class="cmn-button">Join Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- ==== / event section end ==== -->
 
 
 
-
-
-
-
     <!-- ==== team section start ==== -->
-    <section class="section team wow fadeInUp" data-wow-duration="0.4s">
+    <section class="section team wow fadeInUp" data-wow-duration="0.4s"
+        style="background-color: rgba(12, 169, 64, 0.05);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">

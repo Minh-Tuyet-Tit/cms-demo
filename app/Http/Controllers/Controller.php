@@ -16,18 +16,24 @@ class Controller extends BaseController
 
     public function index(Request $request)
     {
-        return view('home', compact('request'));
+        try {
+            $category = CategoryPost::where('cat_name', 'Posts')->first();
+            // $posts = Posts::where('cat_id', $category->id)->get();
+            $posts = Posts::latest('cat_id', $category->id)->take(10)->get();
+        } catch (\Throwable $th) {
+            
+        }
+        return view('home', compact('request', 'posts'));
     }
 
     public function blog(Request $request, $slug)
     {
         try {
-            $posts = Posts::join('category_post', 'posts.cat_id', '=', 'category_post.id')
-                ->where('category_post.cat_name', $slug)
-                ->get();
-            // $posts = Posts::latest()->take(10)->get();
+
+            $category = CategoryPost::where('cat_name', $slug)->first();
+            $posts = Posts::where('cat_id', $category->id)->get();
         } catch (\Throwable $th) {
-            return redirect()->back();
+            return redirect()->back()->with('fail', 'không lấy đc post');
         }
 
         return view('Frontend.Blog', compact('posts', 'request'));
@@ -52,21 +58,25 @@ class Controller extends BaseController
             return redirect()->back();
         }
 
-        return view('Frontend.gallery', compact('gallery', 'request'));
+        return view('Frontend.Gallery', compact('request'));
     }
 
     public function members(Request $request, $slug)
     {
         try {
-            $members = Posts::join('category_post', 'posts.cat_id', '=', 'category_post.id')
-                ->where('category_post.cat_name', $slug)
-                ->get();
+            $category = CategoryPost::where('cat_name', $slug)->first();
+            $members = Posts::where('cat_id', $category->id)->get();
         } catch (\Throwable $th) {
             return redirect()->back();
         }
 
 
 
-        return view('Frontend.members', compact('request', 'members'));
+        return view('Frontend.Members', compact('request', 'members'));
+    }
+    public function about(Request $request)
+    {
+
+        return view('Frontend.About', compact('request'));
     }
 }

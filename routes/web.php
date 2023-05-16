@@ -21,6 +21,7 @@ Route::prefix('/')->group(function () {
 
     Route::get('/gallery', [App\Http\Controllers\Controller::class, 'gallery']);
     Route::get('/members/{slug}', [App\Http\Controllers\Controller::class, 'members']);
+    Route::get('/about', [App\Http\Controllers\Controller::class, 'about']);
 });
 
 
