@@ -51,7 +51,6 @@
  --------- (2.1) reset styles start ---------
  ==== */
 
-
 :root {
     --primary-color: #e6602c;
 }
@@ -71,6 +70,16 @@
     src: url("../font/Font_SVN-mont/SVN-Mont-SemiBold.otf");
 }
 
+.font-bold {
+    font-family: SVN_Mont_Bold !important;
+}
+.font-semibold {
+    font-family: SVN_Mont_SemiBold !important;
+}
+.font-regular {
+    font-family: SVN_Mont_Regular !important;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -78,7 +87,7 @@
     box-sizing: border-box;
 }
 
-p{
+p {
     margin: 10px 0 !important;
 }
 
@@ -664,8 +673,6 @@ i {
     color: #000000;
 }
 
-
-
 .social a:hover {
     background-color: var(--primary-color);
 }
@@ -1203,7 +1210,7 @@ i {
     );
 
     background-color: #000000 !important;
-    background: linear-gradient(180deg, #C13A20 0%, #F5723F 98.48%);
+    background: linear-gradient(180deg, #c13a20 0%, #f5723f 98.48%);
     z-index: 999999;
 }
 
@@ -1321,7 +1328,7 @@ i {
         from(#3f3f3f),
         to(var(--primary-color))
     );
-    background: linear-gradient(180deg, #C13A20 0%, #F5723F 98.48%);
+    background: linear-gradient(180deg, #c13a20 0%, #f5723f 98.48%);
     height: 100%;
     position: fixed;
     top: 0;
@@ -1986,8 +1993,7 @@ i {
     z-index: 0;
 }
 
-
-.banner--inner .banner--inner__content{
+.banner--inner .banner--inner__content {
     position: relative;
     z-index: 1;
 }
@@ -3453,7 +3459,6 @@ i {
 .team .team__slider,
 .team .team__slider--secondary {
     margin-top: -10px;
-    
 }
 
 .team .team__slider-card {
@@ -5232,7 +5237,7 @@ i {
 
 .sidebar .sidebar__item-single .sidebar__item-content h6 {
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .sidebar .sidebar__item-single .sidebar__item-content p {
@@ -6866,7 +6871,7 @@ i {
     }
     .header .nav__menu-link {
         width: 100%;
-        background-color:#e6602c7a;
+        background-color: #e6602c7a;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

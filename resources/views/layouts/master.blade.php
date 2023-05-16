@@ -122,15 +122,15 @@
                                     </a>
                                 </div>
 
-                                <ul class="nav__menu-items gap-4">
+                                <ul class="nav__menu-items">
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('/') }}" class="nav__menu-link nav__menu-link">
-                                            Home
+                                           {{ __('lang.home')}}
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{url('/about')}}" class="nav__menu-link nav__menu-link">
-                                            About us
+                                            {{__('lang.about')}}
                                         </a>
                                         {{-- <ul class="nav__dropdown">
                                             <li>
@@ -149,17 +149,17 @@
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('members/Members') }}" class="nav__menu-link nav__menu-link">
-                                            Members
+                                            {{__('lang.member')}}
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
-                                            Event
+                                           {{__('lang.event')}}
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('gallery') }}" class="nav__menu-link nav__menu-link">
-                                            Gallery
+                                            {{__('lang.gallery')}}
                                         </a>
                                     </li>
 
@@ -189,8 +189,8 @@
                                 <div class="nav__uncollapsed-item gap-2 d-md-flex">
                                     {{-- <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a>
                                     <a href="sign-up.html" class="cmn-button">Sign Up</a> --}}
-
-                                    <a href="" style="color: #333"> VI<i style="font-size: 16px; color: #818181;" class="fas fa-chevron-down"></i></a>
+                                    {{-- <a href="" style="color: #333"> VI<i style="font-size: 16px; color: #818181;" class="fas fa-chevron-down"></i></a> --}}
+                                    <i  style="color: #696969" class="fas fa-user-circle fz__28"></i>
                                 </div>
                                 <button class="nav__bar d-block d-xl-none">
                                     <span class="icon-bar top-bar"></span>

@@ -24,27 +24,27 @@
                 <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/one.png')}}" alt="Image">
+                            <img src="{{asset('Frontend/images/gallery/1.png')}}" alt="Image">
                         </div>
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/two.png')}}" alt="Image">
+                            <img src="{{asset('Frontend/images/gallery/2.png')}}" alt="Image">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xl-4 section__col d-none d-lg-block">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/three.png')}}" alt="Image">
+                            <img src="{{asset('Frontend/images/gallery/3.png')}}" alt="Image">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/four.png')}}" alt="Image">
+                            <img src="{{asset('Frontend/images/gallery/4.png')}}" alt="Image">
                         </div>
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/five.png')}}" alt="Image">
+                            <img src="{{asset('Frontend/images/gallery/5.png')}}" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -84,40 +84,40 @@
         </div>
         <div class="gallery-slider__wrapper">
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/six.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/1.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/seven.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/2.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/eight.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/4.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/nine.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/5.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/ten.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/1.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/eleven.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/2.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/six.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/4.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/seven.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/5.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/eight.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/1.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/nine.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/2.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/ten.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/4.png')}}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/eleven.png')}}" alt="Gallery">
+                <img src="{{asset('Frontend/images/gallery/5.png')}}" alt="Gallery">
             </div>
         </div>
     </section>

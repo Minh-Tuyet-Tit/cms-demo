@@ -6,9 +6,21 @@
     <section class="banner--inner">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="banner--inner__content">
-                        <h2 class="text-center">Blog</h2>
+                        <h2>Blog list</h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner--inner__breadcrumb d-flex justify-content-start justify-content-md-end">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{url('/')}}">{{__('lang.home')}}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Blog list
+                                </li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -80,12 +92,13 @@
                         <div class="sidebar__single">
                             <h5>Search</h5>
                             <hr>
-                            <form action="#" method="post">
+                            <form action="{{ url('/api/search') }}" method="get">
                                 <div class="search_form">
-                                    <input type="text" name="post-search" id="postSearch" placeholder="Search">
+                                    <input type="text" name="search" id="post-Search" placeholder="Search">
                                     <button type="submit">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </button>
+
                                 </div>
                             </form>
                         </div>
@@ -103,8 +116,8 @@
                                         </div>
                                         <div class="sidebar__item-content">
                                             <h6>
-                                                <a href="{{ url('blog-detail/' . $post->id) }}"
-                                                    title="Read More">{{ $post->post_title }}</a>
+                                                <a class="font-regular" href="{{ url('blog-detail/' . $post->id) }}"
+                                                    title="Read More">{{ substr($post->post_title, 0, 35) . '...' }}</a>
                                             </h6>
                                             <p class="seocndary-text">{{ $post->created_at }}</p>
                                         </div>
@@ -150,4 +163,35 @@
     </section>
     <!-- ==== / blog grid end ==== -->
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            var search = document.getElementById('post-Search');
+
+            var divSearch = document.querySelector('.search_form');
+
+            search.addEventListener('focus', e => {
+
+            })
+
+            search.addEventListener('input', (e) => {
+                if (e.target.value) {
+                    fetch(`{{ url('api/search?search=') }}${e.target.value}`)
+                        .then((res) => {
+                            return res.json();
+                        })
+                        .then((data) => {
+                            console.log(data);
+                            if (data.length == 0) {
+
+                                return;
+                            }
+
+                        });
+                } else {
+
+                }
+            });
+        });
+    </script>
 @stop()

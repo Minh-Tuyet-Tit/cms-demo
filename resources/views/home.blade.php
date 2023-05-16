@@ -21,8 +21,10 @@
                             feel welcome. Fully dedicated to golf lovers.
                         </p>
                         <div class="banner__content-cta">
-                            <a href="join-club.html" class="cmn-button">Join Our Club</a>
-                            <a href="{{ url('/about') }}" class="cmn-button cmn-button--secondary">About Us</a>
+                            <a href="join-club.html" class="cmn-button">{{ __('lang.register') }}</a>
+
+                            <a href="{{ url('/about') }}"
+                                class="cmn-button cmn-button--secondary">{{ __('lang.about') }}</a>
                         </div>
                     </div>
                 </div>
@@ -31,168 +33,17 @@
     </section>
     <!-- ==== / banner section end ==== -->
 
-    <!-- ==== facility section start ==== -->
-    {{-- <section class="section facility wow fadeInUp" data-wow-duration="0.4s">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="section__header">
-                        <h5 class="section__header-sub-title">Facility</h5>
-                        <h2 class="section__header-title">
-                            Golftio Club Facilities
-                        </h2>
-                        <p>
-                            Golftio Sports Club is a golf club with a
-                            history that goes back to XX century. From a
-                            cricket club to soccer tournaments,
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-10 col-lg-12">
-                    <div class="facility__slider">
-                        <div class="facility__card">
-                            <div class="facility__card-icon">
-                                <i class="golftio-ball"></i>
-                            </div>
-                            <div class="facility__card-content">
-                                <h5>
-                                    <a href="facility-details.html">Golf Course</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="facility__card">
-                            <div class="facility__card-icon">
-                                <i class="golftio-shot-great-upper"></i>
-                            </div>
-                            <div class="facility__card-content">
-                                <h5>
-                                    <a href="facility-details.html">Expert Trainer</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="facility__card">
-                            <div class="facility__card-icon">
-                                <i class="golftio-gym"></i>
-                            </div>
-                            <div class="facility__card-content">
-                                <h5>
-                                    <a href="facility-details.html">Fitnes Center</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="facility__card">
-                            <div class="facility__card-icon">
-                                <i class="golftio-flag"></i>
-                            </div>
-                            <div class="facility__card-content">
-                                <h5>
-                                    <a href="facility-details.html">Golf Club</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="facility__card">
-                            <div class="facility__card-icon">
-                                <i class="golftio-ball"></i>
-                            </div>
-                            <div class="facility__card-content">
-                                <h5>
-                                    <a href="facility-details.html">Golf Course</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="facility__card">
-                            <div class="facility__card-icon">
-                                <i class="golftio-shot-great-upper"></i>
-                            </div>
-                            <div class="facility__card-content">
-                                <h5>
-                                    <a href="facility-details.html">Expert Trainer</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="facility__card">
-                            <div class="facility__card-icon">
-                                <i class="golftio-gym"></i>
-                            </div>
-                            <div class="facility__card-content">
-                                <h5>
-                                    <a href="facility-details.html">Fitnes Center</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="facility__card">
-                            <div class="facility__card-icon">
-                                <i class="golftio-flag"></i>
-                            </div>
-                            <div class="facility__card-content">
-                                <h5>
-                                    <a href="facility-details.html">Golf Club</a>
-                                </h5>
-                                <p class="secondary-text">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="slider-navigation">
-                        <button class="next-facility cmn-button cmn-button--secondary">
-                            <i class="fa-solid fa-angle-left"></i>
-                        </button>
-                        <button class="prev-facility cmn-button cmn-button--secondary">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- ==== / facility section end ==== -->
+
 
     <section class="section related-news blog wow fadeInUp bg-white" data-wow-duration="0.4s">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="section__header wow fadeInUp" data-wow-duration="0.4s">
-                        <h5 class="section__header-sub-title">Featured Posts</h5>
+                        <h5 class="section__header-sub-title">{{ __('lang.blog_latest') }}</h5>
                         <p>
-                            Golftio Sports Club is a golf club with a
-                            history that goes back to XX century. From a
-                            cricket club to soccer tournaments,
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero facere incidunt nam commodi nisi,
+                            eaque minima hic debitis eveniet?
                         </p>
                     </div>
                 </div>
@@ -205,22 +56,22 @@
                         @foreach ($posts as $post)
                             <div class="blog-single">
                                 <div class="blog__thumb">
-                                    <a href="{{url('blog-detail/'. $post->id)}}" title="Read More">
+                                    <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More">
                                         <img src="{{ $post->image }}" alt="Blog">
                                     </a>
                                 </div>
                                 <div class="blog__content">
                                     <h5>
-                                        <a href="{{url('blog-detail/'. $post->id)}}" title="Read More">{{$post->post_title}}</a>
+                                        <a href="{{ url('blog-detail/' . $post->id) }}"
+                                            title="Read More">{{ $post->post_title }}</a>
                                     </h5>
                                     <div class="blog__content-meta">
-                                        <p><i class="golftio-user"></i> Admin</p>
+                                        <p><i class="golftio-user"></i> Đoàn Văn Năng</p>
                                         <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
                                     </div>
-                                    <p><?= $post->summsry?></p>
-
-                                    <a href="{{url('blog-detail/'. $post->id)}}" title="Read More" class="cmn-button cmn-button--secondary">Read
-                                        more</a>
+                                    <?= $post->summary ?>
+                                    <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
+                                        class="cmn-button cmn-button--secondary">{{ __('lang.read_more') }}</a>
                                 </div>
                             </div>
                         @endforeach
@@ -284,9 +135,9 @@
                 </div>
                 <div class="col-lg-7 col-xxl-6 offset-xxl-1">
                     <div class="section__content">
-                        <h5 class="section__content-sub-title">About us</h5>
-                        <h2 class="section__content-title">
-                            We have managed golf courses in your city
+                        <h5 class="section__content-sub-title">{{ __('lang.about') }}</h5>
+                        <h2 class="section__content-title fz__48">
+                            <?= __('lang.welcom') ?>
                         </h2>
                         <p class="section__content-text">
                             We offer a lot of courses of varying difficulty
@@ -330,7 +181,7 @@
                             </div>
                         </div>
                         <div class="section__content-cta">
-                            <a href="about-us.html" class="cmn-button">Read More</a>
+                            <a href="{{url('about')}}" class="cmn-button">{{ __('lang.read_more') }}</a>
                         </div>
                     </div>
                 </div>
@@ -339,82 +190,23 @@
     </section>
     <!-- ==== / about section end ==== -->
 
-    <!-- ==== event section start ==== -->
-    {{-- <section class="section event wow fadeInUp" data-wow-duration="0.4s">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section__header--secondary">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
-                                <div class="section__header--secondary__content">
-                                    <h5>Event</h5>
-                                    <h2>Our upcoming events</h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="section__header--secondary__cta">
-                                    <a href="" class="cmn-button">See All Event</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center section__row">
-                <div class="col-sm-10 col-md-6 section__col">
-                    <div class="event__single">
-                        <div class="event__single-thumb">
-                            <a href="sign-up.html">
-                                <img src="{{ asset('Frontend/images/event/one.png') }}" alt="Image" />
-                            </a>
-                        </div>
-                        <div class="event__single-content">
-                            <h3>
-                                13 <span class="primary-text">Nov</span>
-                            </h3>
-                            <a href="sign-up.html" class="cmn-button">Join Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-10 col-md-6 section__col">
-                    <div class="event__single">
-                        <div class="event__single-thumb">
-                            <a href="sign-up.html">
-                                <img src="{{ asset('Frontend/images/event/two.png') }}" alt="Image" />
-                            </a>
-                        </div>
-                        <div class="event__single-content">
-                            <h3>
-                                27 <span class="primary-text">Nov</span>
-                            </h3>
-                            
-                            <a href="sign-up.html" class="cmn-button">Join Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- ==== / event section end ==== -->
+
 
 
 
     <!-- ==== team section start ==== -->
-    <section class="section team wow fadeInUp" data-wow-duration="0.4s"
-        style="background-color: rgba(12, 169, 64, 0.05);">
+    <section class="section team wow fadeInUp" data-wow-duration="0.4s">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="section__header">
-                        <h5 class="section__header-sub-title">Our Team</h5>
-                        <h2 class="section__header-title">
-                            Meet Our Experts
+                        <h5 class="section__header-sub-title">{{ __('lang.member') }}</h5>
+                        <h2 class="section__header-title fz__48">
+                            {{ __('lang.member_title') }}
                         </h2>
                         <p>
-                            Golftio Sports Club is a golf club with a
-                            history that goes back to XX century. From a
-                            cricket club to soccer tournaments,
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore est blanditiis libero.
+                            Provident, 
                         </p>
                     </div>
                 </div>
@@ -432,9 +224,6 @@
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                             <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
                             </a>
                             <a href="#">
@@ -453,9 +242,6 @@
                         <div class="social">
                             <a href="#">
                                 <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
                             </a>
                             <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
@@ -478,9 +264,6 @@
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                             <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
                             </a>
                             <a href="#">
@@ -499,9 +282,6 @@
                         <div class="social">
                             <a href="#">
                                 <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
                             </a>
                             <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
@@ -524,9 +304,6 @@
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                             <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
                             </a>
                             <a href="#">
@@ -545,9 +322,6 @@
                         <div class="social">
                             <a href="#">
                                 <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
                             </a>
                             <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
@@ -570,9 +344,6 @@
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                             <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
                             </a>
                             <a href="#">
@@ -592,9 +363,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
+                           
                             <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
                             </a>
@@ -607,13 +376,8 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="slider-navigation">
-                        <button class="next-team--secondary cmn-button cmn-button--secondary">
-                            <i class="fa-solid fa-angle-left"></i>
-                        </button>
-                        <button class="prev-team--secondary cmn-button cmn-button--secondary">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </button>
+                    <div class="text-center">
+                        <a href="{{url('/members/Members')}}" class="cmn-button">{{__('lang.see_all')}}</a>
                     </div>
                 </div>
             </div>
@@ -623,12 +387,13 @@
 
 
     <!-- ==== gallery section start ==== -->
-    <div class="section gallery wow fadeInUp" data-wow-duration="0.4s">
+    <div class="section gallery wow fadeInUp" data-wow-duration="0.4s"
+        style="background-color: rgba(12, 169, 64, 0.05);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="section__header wow fadeInUp" data-wow-duration="0.4s">
-                        <h5 class="section__header-sub-title">Gallery</h5>
+                        <h5 class="section__header-sub-title">{{__('lang.gallery')}}</h5>
                         <p>
                             Golftio Sports Club is a golf club with a
                             history that goes back to XX century. From a
@@ -641,27 +406,27 @@
                 <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/one.png') }}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Image">
                         </div>
                         <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/two.png') }}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Image">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xl-4 section__col d-none d-lg-block">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/three.png') }}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/3.png') }}" alt="Image">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/four.png') }}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Image">
                         </div>
                         <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/five.png') }}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Image">
                         </div>
                     </div>
                 </div>

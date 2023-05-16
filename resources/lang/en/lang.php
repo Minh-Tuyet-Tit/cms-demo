@@ -36,9 +36,24 @@ return [
 
     'name'=>'Name',
     'thumb'=>'Image',
-    'cancel'=>'Cancel'
+    'cancel'=>'Cancel',
 
     
+
+
+
+    // frontend
+
+    'about'=>'About us',
+    'member' =>'Members',
+    'event'=>'Event',
+    'gallery'=>'Gallery',
+    'register'=>'Register member',
+    'blog_latest' => 'Featured Posts',
+    'read_more' => 'Read more',
+    'welcom'=>'Hello! we are golf club “SUNSHINE”',
+    'member_title'=> 'Meet the Sunshine Golfers',
+    'see_all'=>'See All',
 
     
 ];

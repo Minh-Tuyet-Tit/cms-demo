@@ -11,9 +11,22 @@
     <section class="banner--inner">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="banner--inner__content">
-                        <h2 class="text-center">{{$post->post_title}}</h2>
+                        <h2>Blog Details</h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner--inner__breadcrumb d-flex justify-content-start justify-content-md-end">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{url('/')}}">{{__('lang.home')}}</a></li>
+                                <li class="breadcrumb-item">Blog</li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Blog Details
+                                </li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -248,7 +261,7 @@
                                         </div>
                                     </div>
                                 @endforeach
-                                
+
                             </div>
                         </div>
                         <div class="sidebar__single">
@@ -336,7 +349,7 @@
                                         <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
                                     </div>
                                     <?= $post->summary ?>
-                                    
+
                                     <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
                                         class="cmn-button cmn-button--secondary">Read more</a>
                                 </div>
@@ -358,46 +371,46 @@
                 <div class="col-12">
                     <div class="sponsor__inner">
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/one.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/one.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/two.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/two.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/three.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/three.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/four.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/four.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/five.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/five.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/six.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/six.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/one.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/one.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/one.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/one.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/two.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/two.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/three.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/three.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/four.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/four.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/five.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/five.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/six.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/six.png') }}" alt="Sponsor">
                         </div>
                         <div class="sponsor__inner-card">
-                            <img src="{{asset('Frontend/images/sponsor/one.png')}}" alt="Sponsor">
+                            <img src="{{ asset('Frontend/images/sponsor/one.png') }}" alt="Sponsor">
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,31 @@
 }
 
 
+/* font-size */
+
+
+.fz__24{
+    font-size: 24px !important;
+}
+.fz__28{
+    font-size: 28px !important;
+}
+.fz__14{
+    font-size: 14px !important;
+}
+
+.fz__16{
+    font-size: 16px !important;
+}
+
+.fz__20{
+    font-size: 20px !important;
+}
+.fz__48{
+    font-size: 48px !important;
+}
+
+
 
 .nav__logo img{
     max-width: 100px;
@@ -134,4 +159,20 @@ td img {
 
 .slick-arrow:hover i{
     color: white !important;
+}
+
+
+.search_form{
+    position: relative;
+}
+
+.box-search{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100px;
+    
+    background-color: #e6602c !important;
+
+    top: 200%;
 }
