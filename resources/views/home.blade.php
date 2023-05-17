@@ -63,13 +63,14 @@
                                 <div class="blog__content">
                                     <h5>
                                         <a href="{{ url('blog-detail/' . $post->id) }}"
-                                            title="Read More">{{ $post->post_title }}</a>
+                                            title="Read More">{{ cutStr($post->post_title, 0, 45) . '...' }}</a>
                                     </h5>
                                     <div class="blog__content-meta">
                                         <p><i class="golftio-user"></i> Đoàn Văn Năng</p>
                                         <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
                                     </div>
-                                    <?= $post->summary ?>
+                                    <p> {{ cutStr($post->summary, 0, 60) . ' ...' }} </p>
+
                                     <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
                                         class="cmn-button cmn-button--secondary">{{ __('lang.read_more') }}</a>
                                 </div>
@@ -181,7 +182,7 @@
                             </div>
                         </div>
                         <div class="section__content-cta">
-                            <a href="{{url('about')}}" class="cmn-button">{{ __('lang.read_more') }}</a>
+                            <a href="{{ url('about') }}" class="cmn-button">{{ __('lang.read_more') }}</a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +207,7 @@
                         </h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore est blanditiis libero.
-                            Provident, 
+                            Provident,
                         </p>
                     </div>
                 </div>
@@ -229,6 +230,9 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-eye"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -248,6 +252,9 @@
                             </a>
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-eye"></i>
                             </a>
                         </div>
                     </div>
@@ -269,6 +276,9 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-eye"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -288,6 +298,9 @@
                             </a>
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-eye"></i>
                             </a>
                         </div>
                     </div>
@@ -309,6 +322,9 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-eye"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -328,6 +344,9 @@
                             </a>
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-eye"></i>
                             </a>
                         </div>
                     </div>
@@ -349,6 +368,9 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-eye"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -363,12 +385,15 @@
                             <a href="#">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
-                           
+
                             <a href="#">
                                 <i class="fa-brands fa-square-instagram"></i>
                             </a>
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-eye"></i>
                             </a>
                         </div>
                     </div>
@@ -377,7 +402,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="text-center">
-                        <a href="{{url('/members/Members')}}" class="cmn-button">{{__('lang.see_all')}}</a>
+                        <a href="{{ url('/members/Members') }}" class="cmn-button">{{ __('lang.see_all') }}</a>
                     </div>
                 </div>
             </div>
@@ -393,7 +418,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="section__header wow fadeInUp" data-wow-duration="0.4s">
-                        <h5 class="section__header-sub-title">{{__('lang.gallery')}}</h5>
+                        <h5 class="section__header-sub-title">{{ __('lang.gallery') }}</h5>
                         <p>
                             Golftio Sports Club is a golf club with a
                             history that goes back to XX century. From a
@@ -434,6 +459,8 @@
         </div>
     </div>
     <!-- ==== / gallery section end ==== -->
+
+
 
 
 @stop

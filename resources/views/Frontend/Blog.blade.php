@@ -46,14 +46,14 @@
                                         <div class="blog__content">
                                             <h5>
                                                 <a href="{{ url('blog-detail/' . $post->id) }}"
-                                                    title="Read More">{{ $post->post_title }}</a>
+                                                    title="Read More">{{ cutStr($post->post_title, 0, 45). '...' }}</a>
 
                                             </h5>
                                             <div class="blog__content-meta">
                                                 <p><i class="golftio-user"></i> Admin</p>
                                                 <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
                                             </div>
-                                            <?= $post->summary ?>
+                                            <p>{{cutStr($post->summary, 0 , 60). '...'}}</p>
                                             {{-- <p class="secondary-text">{{ substr($post->summary, 3, 100)}}</p> --}}
                                             <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
                                                 class="cmn-button cmn-button--secondary">Read more</a>
