@@ -21,7 +21,7 @@
                             feel welcome. Fully dedicated to golf lovers.
                         </p>
                         <div class="banner__content-cta">
-                            <a href="join-club.html" class="cmn-button">{{ __('lang.register') }}</a>
+                            <a data-toggle="modal" data-target="#p-developing" href="" class="cmn-button">{{ __('lang.register') }}</a>
 
                             <a href="{{ url('/about') }}"
                                 class="cmn-button cmn-button--secondary">{{ __('lang.about') }}</a>
@@ -230,7 +230,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modelId">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </div>
@@ -253,7 +253,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modelId">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </div>
@@ -276,7 +276,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modelId">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </div>
@@ -299,7 +299,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modelId">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </div>
@@ -322,7 +322,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modelId">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </div>
@@ -345,7 +345,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modelId">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </div>
@@ -368,7 +368,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modelId">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </div>
@@ -392,7 +392,7 @@
                             <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modelId">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </div>
@@ -460,6 +460,23 @@
     </div>
     <!-- ==== / gallery section end ==== -->
 
+
+
+
+  
+    <script>
+        // document.addEventListener("DOMContentLoaded", function() {
+
+
+        //     $('#exampleModal').on('show.bs.modal', event => {
+        //         var button = $(event.relatedTarget);
+        //         var modal = $(this);
+        //         // Use above variables to manipulate the DOM
+
+        //     });
+
+        // });
+    </script>
 
 
 

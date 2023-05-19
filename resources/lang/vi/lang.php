@@ -39,7 +39,7 @@ return [
 
 
 
-    'about' => 'Về Chúng Tôi',
+    'about' => 'Về chúng tôi',
     'member' => 'Thành viên',
     'event' => 'Sự kiện',
     'gallery' => 'Thư viện ảnh',
@@ -49,6 +49,7 @@ return [
     'welcom' => 'Xin chào! chúng tôi <br/> là “SUNSHINE” Golf club',
     'member_title'=> 'Gặp gỡ các Sunshine Golfer',
     'see_all' => 'Xem tất cả',
+    'blog_detail' => 'Chi tiết bài viết',
 
 
 

@@ -406,20 +406,7 @@ $menus = [
             .catch(error => {
                 console.error(error);
             });
-        // ClassicEditor
-        //     .create(document.querySelector('#product-summary')), {
-        //         simpleUpload: {
-        //             uploadUrl: '/your-image-upload-api',
-        //             headers: {
-        //                 'X-CSRF-TOKEN': 'CSRF-Token',
-        //                 Authorization: 'Bearer <JSON Web Token>'
-        //             },
-        //             acceptedFileTypes: ['image/jpeg', 'image/png', 'image/gif']
-        //         }
-        //     }
-        //     .catch(error => {
-        //         console.error(error);
-        //     });
+        
         ClassicEditor
             .create(document.querySelector('#product-description'))
             .catch(error => {

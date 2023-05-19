@@ -2010,9 +2010,9 @@ i {
 .banner--inner .breadcrumb .breadcrumb-item {
     margin-top: 0px;
     color: #ffffff;
-    padding: 0px 0px 0px 24px;
+    padding: 0px 0px 0px 8px;
     position: relative;
-    padding-right: 16px;
+    padding-right: 4px;
 }
 
 .banner--inner .breadcrumb .breadcrumb-item a {
@@ -2027,10 +2027,10 @@ i {
 .banner--inner .breadcrumb .breadcrumb-item::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    content: "\f105";
+    content: "/";
     position: absolute;
     left: 0px;
-    font-size: 14px;
+    font-size: 18px;
     color: #ffffff;
     padding: 0px;
 }

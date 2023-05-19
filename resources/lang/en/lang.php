@@ -54,6 +54,7 @@ return [
     'welcom'=>'Hello! we are golf club “SUNSHINE”',
     'member_title'=> 'Meet the Sunshine Golfers',
     'see_all'=>'See All',
+    'blog_detail' => 'Blog Detail',
 
     
 ];

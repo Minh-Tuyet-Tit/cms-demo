@@ -27,7 +27,9 @@
     font-size: 48px !important;
 }
 
-
+.active{
+    color: var(--primary-color) !important;
+}
 
 .nav__logo img{
     max-width: 100px;
@@ -78,6 +80,11 @@
     opacity: 0;
     cursor: pointer;
     transition: 0.2s linear;
+}
+
+
+.cl__primary{
+    color: var(--primary-color) !important;
 }
 
 td img {
@@ -174,4 +181,121 @@ td img {
     background-color: #e6602c !important;
 
     top: 200%;
+}
+
+
+/* modal custem */
+
+#modelId .member-info{
+    width: 90%;
+}
+#modelId .modal-header{
+    border-bottom: none !important;
+}
+
+#modelId .member-info .member-info__header .member-info__name{
+    font-weight: 400 !important;
+}
+
+
+#modelId .member-info .member-info__header{
+    width: 100%;
+    padding-bottom: 24px;
+    border-bottom: 1px solid  #120D3D;
+
+}
+
+#modelId .member-info .member-info__desc{
+    margin-top: 64px;
+}
+
+
+#modelId .member-info .member-info__desc p{
+    margin-bottom: 36px;
+}
+
+#modelId .modal-content{
+    background-color: #F5FBF5 !important;
+}
+
+/* pop login */
+
+#p-login .modal-content{
+    border-radius: 16px;
+}
+
+
+#p-login .modal-body{
+    background-color: #F5FBF5 !important;
+    border-radius: 16px;
+    padding: 0 !important;
+}
+
+
+#p-login .modal-header{
+    border-bottom: none !important;
+}
+
+
+#p-login .form-login{
+    padding: 0 50px;
+}
+
+#p-login .form-login h2{
+    margin-bottom: 15px;
+}
+
+#p-login .login-fb,
+#p-login .login-gg{
+    display: block;
+    
+    padding: 12px;
+    text-align: left;
+    color: white;
+    margin-bottom: 32px;
+    border-radius: 8px;
+}
+
+#p-login .login-fb img,
+#p-login .login-gg img{
+    margin-right: 60px;
+}
+
+
+#p-login .login-fb{
+    margin-top: 56px;
+    background-color: #32519B !important;
+}
+
+#p-login .login-gg{
+    background-color: #D0463B !important;
+}
+
+
+#p-login .form-login{
+    width: 100%;
+    text-align: center;
+}
+
+
+/*poup developing */
+
+#p-developing .modal-header{
+    border-bottom: none ;
+}
+
+#p-developing .modal-content{
+    background-color: #F5FBF5 !important;
+    padding-bottom: 50px;
+}
+
+
+#p-developing .developing{
+    text-align: center;
+
+}
+
+#p-developing .developing img{
+    width: 423px;
+    margin-bottom: 83px;
 }

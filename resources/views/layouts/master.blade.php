@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <!-- Mirrored from pixner.net/golftio/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 May 2023 06:27:17 GMT -->
@@ -25,6 +21,8 @@
     <!-- ==== css dependencies start ==== -->
 
     <!-- bootstrap five css -->
+    <link rel="stylesheet"
+        href="{{ asset('assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('Frontend/vendor/bootstrap/css/bootstrap.min.css') }}" />
     <!-- font awesome six css -->
     <link rel="stylesheet" href="{{ asset('Frontend/vendor/font-awesome/css/all.min.css') }}" />
@@ -128,12 +126,14 @@
 
                                 <ul class="nav__menu-items">
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{ url('/') }}" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('/') }}"
+                                            class="nav__menu-link nav__menu-link {{ $request->is('/') ? 'active' : '' }}">
                                             {{ __('lang.home') }}
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{ url('/about') }}" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('/about') }}"
+                                            class="nav__menu-link nav__menu-link {{ $request->is('about') ? 'active' : '' }}">
                                             {{ __('lang.about') }}
                                         </a>
                                         {{-- <ul class="nav__dropdown">
@@ -147,12 +147,14 @@
                                         </ul> --}}
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{ url('blog/Posts') }}" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('blog/Posts') }}"
+                                            class="nav__menu-link nav__menu-link {{ $request->is('blog/Posts') ? 'active' : '' }}">
                                             Blog
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{ url('members/Members') }}" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('members/Members') }}"
+                                            class="nav__menu-link nav__menu-link {{ $request->is('members/Members') ? 'active' : '' }}">
                                             {{ __('lang.member') }}
                                         </a>
                                     </li>
@@ -162,7 +164,8 @@
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{ url('gallery') }}" class="nav__menu-link nav__menu-link">
+                                        <a href="{{ url('gallery') }}"
+                                            class="nav__menu-link nav__menu-link {{ $request->is('gallery') ? 'active' : '' }}">
                                             {{ __('lang.gallery') }}
                                         </a>
                                     </li>
@@ -194,7 +197,8 @@
                                     {{-- <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a>
                                     <a href="sign-up.html" class="cmn-button">Sign Up</a> --}}
                                     {{-- <a href="" style="color: #333"> VI<i style="font-size: 16px; color: #818181;" class="fas fa-chevron-down"></i></a> --}}
-                                    <i style="color: #696969" class="fas fa-user-circle fz__28"></i>
+                                    <i data-toggle="modal" data-target="#p-login" style="color: #696969"
+                                        class="fas fa-user-circle fz__28"></i>
                                 </div>
                                 <button class="nav__bar d-block d-xl-none">
                                     <span class="icon-bar top-bar"></span>
@@ -328,6 +332,142 @@
     </footer>
 
 
+    <!-- Modal member-->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+
+
+                            <div class="col-md-6">
+
+                                <div class="card-image text-center">
+                                    <img class="w-75" src="{{ asset('Frontend/images/gallery/3.png') }}"
+                                        alt="Image">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="member-info">
+                                    <div class="member-info__header">
+                                        <h5 class="fz__24 font-regular member-info__name">ĐOÀN VĂN NĂNG</h5>
+                                        <p class="fz__24 font-regular member-info__text">Foundation</p>
+                                    </div>
+                                    <div class="member-info__desc">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+                                            nostrum
+                                            similique delectus laboriosam eius ad maiores deserunt. Ipsa natus, amet
+                                            nobis
+                                            vitae repellendus laboriosam totam explicabo? Cupiditate dolor asperiores
+                                            dolores.</p>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nulla.
+                                            Suscipit tenetur deserunt adipisci rem dignissimos, quas dolorum ducimus aut
+                                            velit numquam obcaecati, commodi nobis cupiditate. Molestias voluptatibus ut
+                                            enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal login -->
+    <div class="modal fade" id="p-login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true" aria-modal="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row no-gutters">
+
+                            <div class="col-md-6 p-0 ">
+
+                                <div class="card-image text-center">
+                                    <img class="w-100" src="{{ asset('Frontend/images/login.png') }}"
+                                        alt="Image">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="member-info">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn close" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                                        </button>
+                                    </div>
+                                    <div class="form-login">
+                                        <h2>Đăng nhập</h2>
+                                        <p>Chào mừng bạn đến với Sunshine Golf Club !</p>
+                                        <a href="" class="login-fb">
+                                            <img class="img-fluid"
+                                                src="{{ asset('Frontend/images/social/fb.png') }}" />
+                                            Đăng nhập với Facebook
+                                        </a>
+                                        <a href="" class="login-gg">
+                                            <img class="img-fluid"
+                                                src="{{ asset('Frontend/images/social/gg.png') }}" />
+                                            Đăng nhập với Google
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal developing -->
+    <div class="modal fade show" id="p-developing" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true" aria-modal="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="modal-header">
+                            <h5 class="modal-title"></h5>
+                            <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                            </button>
+                        </div>
+                        <div class="developing">
+                            <img src="{{ asset('Frontend/images/p-developing.png') }}" alt="">
+                            <h5>Tính năng đang phát triển <br>
+                                Bạn vui lòng quay lại sau</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
     <!-- ==== / footer end ==== -->
@@ -346,6 +486,7 @@
         src="{{ asset('Frontend/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
     <script src="{{ asset('Frontend/vendor/jquery/jquery-3.6.3.min.js') }}"></script>
     <!-- bootstrap five js -->
+    <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('Frontend/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- nice select js -->
     <script src="{{ asset('Frontend/vendor/nice-select/js/jquery.nice-select.min.js') }}"></script>

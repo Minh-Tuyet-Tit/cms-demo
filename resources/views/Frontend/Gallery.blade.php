@@ -7,9 +7,21 @@
     <section class="banner--inner">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="banner--inner__content">
-                        <h2 class="text-center">Gallery</h2>
+                        <h2>{{__('lang.gallery')}}</h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner--inner__breadcrumb d-flex justify-content-start justify-content-md-end">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{url('/')}}">{{__('lang.home')}}</a></li>
+                                <li class="breadcrumb-item" aria-current="page">
+                                   {{__('lang.gallery')}}
+                                </li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -24,27 +36,27 @@
                 <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/1.png')}}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Image">
                         </div>
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/2.png')}}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Image">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xl-4 section__col d-none d-lg-block">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/3.png')}}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/3.png') }}" alt="Image">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
                     <div class="gallery__thumb">
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/4.png')}}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Image">
                         </div>
                         <div class="gallery__thumb-single">
-                            <img src="{{asset('Frontend/images/gallery/5.png')}}" alt="Image">
+                            <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -84,40 +96,40 @@
         </div>
         <div class="gallery-slider__wrapper">
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/1.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/2.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/4.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/5.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/1.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/2.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/4.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/5.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/1.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/2.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/4.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Gallery">
             </div>
             <div class="gallery-slider__single">
-                <img src="{{asset('Frontend/images/gallery/5.png')}}" alt="Gallery">
+                <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Gallery">
             </div>
         </div>
     </section>
@@ -136,7 +148,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="gallery-popup__content wow fadeInUp" data-wow-duration="0.4s">
-                        <img src="{{asset('Frontend/images/gallery-modal.png')}}" alt="Gallery">
+                        <img src="{{ asset('Frontend/images/gallery-modal.png') }}" alt="Gallery">
                         <div class="play-wrapper">
                             <a href="https://www.youtube.com/watch?v=RvreULjnzFo" target="_blank"
                                 title="Youtube Video Player" class="play-btn">
