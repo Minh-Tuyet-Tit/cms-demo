@@ -9,16 +9,16 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="banner--inner__content">
-                        <h2>{{__('lang.gallery')}}</h2>
+                        <h2>{{ __('lang.gallery') }}</h2>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="banner--inner__breadcrumb d-flex justify-content-start justify-content-md-end">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{url('/')}}">{{__('lang.home')}}</a></li>
+                                <li class="breadcrumb-item"><a href="{{ url('/') }}">{{ __('lang.home') }}</a></li>
                                 <li class="breadcrumb-item" aria-current="page">
-                                   {{__('lang.gallery')}}
+                                    {{ __('lang.gallery') }}
                                 </li>
                             </ol>
                         </nav>
@@ -32,135 +32,134 @@
     <!-- ==== gallery section start ==== -->
     <div class="section gallery wow fadeInUp" data-wow-duration="0.4s">
         <div class="container">
-            <div class="row section__row align-items-center">
-                <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
-                    <div class="gallery__thumb">
-                        <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Image">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="{{url('/album-detail/1')}}" class="album">
+                        <div class="album__thumb">
+                            <img src="{{ asset('Frontend/images/album/1.png') }}" alt="">
                         </div>
-                        <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Image">
+                        <div class="album__content">
+                            <h5 class="font-regular" >Album:</h5>
+                            <h2 class="fz__32">SSGC - TEAM BUILDING 2024</h2>
+                            <p class="font-regular fz__18">
+                                <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                            </p>
+                            <p class="font-regular fz__18">
+                                <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                            </p>
+                            <p class="font-bold fz__18 album__count">
+                                <i class="fas fa-images"></i> +20 hình ảnh
+                            </p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-lg-4 col-xl-4 section__col d-none d-lg-block">
-                    <div class="gallery__thumb">
-                        <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/3.png') }}" alt="Image">
+                <div class="col-lg-6">
+                    <a href="{{url('/album-detail/1')}}" class="album">
+                        <div class="album__thumb">
+                            <img src="{{ asset('Frontend/images/album/2.png') }}" alt="">
                         </div>
-                    </div>
+                        <div class="album__content">
+                            <h5 class="font-regular" >Album:</h5>
+                            <h2 class="fz__32">SSGC - TEAM BUILDING 2024</h2>
+                            <p class="font-regular fz__18">
+                                <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                            </p>
+                            <p class="font-regular fz__18">
+                                <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                            </p>
+                            <p class="font-bold fz__18 album__count">
+                                <i class="fas fa-images"></i> +20 hình ảnh
+                            </p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-4 section__col">
-                    <div class="gallery__thumb">
-                        <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Image">
+                <div class="col-lg-6">
+                    <a href="{{url('/album-detail/1')}}" class="album">
+                        <div class="album__thumb">
+                            <img src="{{ asset('Frontend/images/album/3.png') }}" alt="">
                         </div>
-                        <div class="gallery__thumb-single">
-                            <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Image">
+                        <div class="album__content">
+                            <h5 class="font-regular" >Album:</h5>
+                            <h2 class="fz__32">SSGC - TEAM BUILDING 2024</h2>
+                            <p class="font-regular fz__18">
+                                <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                            </p>
+                            <p class="font-regular fz__18">
+                                <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                            </p>
+                            <p class="font-bold fz__18 album__count">
+                                <i class="fas fa-images"></i> +20 hình ảnh
+                            </p>
                         </div>
-                    </div>
+                    </a>
                 </div>
+                <div class="col-lg-6">
+                    <a href="{{url('/album-detail/1')}}" class="album">
+                        <div class="album__thumb">
+                            <img src="{{ asset('Frontend/images/album/4.png') }}" alt="">
+                        </div>
+                        <div class="album__content">
+                            <h5 class="font-regular" >Album:</h5>
+                            <h2 class="fz__32">SSGC - TEAM BUILDING 2024</h2>
+                            <p class="font-regular fz__18">
+                                <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                            </p>
+                            <p class="font-regular fz__18">
+                                <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                            </p>
+                            <p class="font-bold fz__18 album__count">
+                                <i class="fas fa-images"></i> +20 hình ảnh
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="{{url('/album-detail/1')}}" class="album">
+                        <div class="album__thumb">
+                            <img src="{{ asset('Frontend/images/album/5.png') }}" alt="">
+                        </div>
+                        <div class="album__content">
+                            <h5 class="font-regular" >Album:</h5>
+                            <h2 class="fz__32">SSGC - TEAM BUILDING 2024</h2>
+                            <p class="font-regular fz__18">
+                                <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                            </p>
+                            <p class="font-regular fz__18">
+                                <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                            </p>
+                            <p class="font-bold fz__18 album__count">
+                                <i class="fas fa-images"></i> +20 hình ảnh
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="{{url('/album-detail/1')}}" class="album">
+                        <div class="album__thumb">
+                            <img src="{{ asset('Frontend/images/album/6.png') }}" alt="">
+                        </div>
+                        <div class="album__content">
+                            <h5 class="font-regular" >Album:</h5>
+                            <h2 class="fz__32">SSGC - TEAM BUILDING 2024</h2>
+                            <p class="font-regular fz__18">
+                                <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                            </p>
+                            <p class="font-regular fz__18">
+                                <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                            </p>
+                            <p class="font-bold fz__18 album__count">
+                                <i class="fas fa-images"></i> +20 hình ảnh
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
     <!-- ==== / gallery section end ==== -->
 
-    <!-- ==== gallery slider section start ==== -->
-    <section class="gallery-slider section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section__header--secondary">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
-                                <div class="section__header--secondary__content">
-                                    <h2>Horizontal scrolling</h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="section__header--secondary__cta">
-                                    <div class="slider-navigation justify-content-lg-end">
-                                        <button class="next-gallery cmn-button cmn-button--secondary">
-                                            <i class="fa-solid fa-angle-left"></i>
-                                        </button>
-                                        <button class="prev-gallery cmn-button cmn-button--secondary">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gallery-slider__wrapper">
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/1.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/2.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/4.png') }}" alt="Gallery">
-            </div>
-            <div class="gallery-slider__single">
-                <img src="{{ asset('Frontend/images/gallery/5.png') }}" alt="Gallery">
-            </div>
-        </div>
-    </section>
-    <!-- ==== / gallery slider section end ==== -->
 
-    <!-- ==== gallery popup start ==== -->
-    <section class="section gallery-popup">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="section__header">
-                        <h2 class="section__header-title">Golf Club Video</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="gallery-popup__content wow fadeInUp" data-wow-duration="0.4s">
-                        <img src="{{ asset('Frontend/images/gallery-modal.png') }}" alt="Gallery">
-                        <div class="play-wrapper">
-                            <a href="https://www.youtube.com/watch?v=RvreULjnzFo" target="_blank"
-                                title="Youtube Video Player" class="play-btn">
-                                <i class="fa-solid fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==== / gallery popup end ==== -->
 
 
 @stop()

@@ -208,7 +208,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="section__header--secondary__cta">
-                                    <a href="event.html" class="cmn-button">See All Event</a>
+                                    <a href="{{url('event')}}" class="cmn-button">Xem tất cả</a>
                                 </div>
                             </div>
                         </div>
@@ -235,7 +235,7 @@
                                 <i class="fas fa-ticket-alt"></i> Free
                             </p>
 
-                            <a href="sign-up.html" class="cmn-button">Xem chi tiết</a>
+                            <a href="sign-up.html" data-toggle="modal" data-target="#p-event" class="cmn-button">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                                 <i class="fas fa-ticket-alt"></i> Free
                             </p>
 
-                            <a href="sign-up.html" class="cmn-button">Xem chi tiết</a>
+                            <a data-toggle="modal" data-target="#p-event" class="cmn-button">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>

@@ -64,6 +64,14 @@ class Controller extends BaseController
 
         return view('Frontend.Gallery', compact('request'));
     }
+    public function albumDetail(Request $request)
+    {
+        
+
+        return view('Frontend.AlbumDetail', compact('request'));
+    }
+
+
 
     public function members(Request $request)
     {
@@ -82,5 +90,10 @@ class Controller extends BaseController
     {
 
         return view('Frontend.About', compact('request'));
+    }
+    public function event(Request $request)
+    {
+
+        return view('Frontend.Event', compact('request'));
     }
 }

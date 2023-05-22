@@ -64,7 +64,7 @@
 
 
 <body>
-    {{-- <div id="preloader">
+    <div id="preloader">
         <div id="ctn-preloader" class="ctn-preloader">
             <div class="animation-preloader">
                 <div class="spinner"></div>
@@ -101,7 +101,7 @@
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
         </div>
-    </div> --}}
+    </div>
 
     <header class="header">
         <div class="container">
@@ -148,7 +148,7 @@
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('blog') }}"
-                                            class="nav__menu-link nav__menu-link {{ $request->is('blog') ? '_active' : '' }}">
+                                            class="nav__menu-link nav__menu-link {{ $request->is('blog')|| $request->is('blog-detail/*') ? '_active' : '' }}">
                                             Blog
                                         </a>
                                     </li>
@@ -159,13 +159,13 @@
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="javascript:void(0)" class="nav__menu-link nav__menu-link">
+                                        <a href="{{url('event')}}" class="nav__menu-link nav__menu-link {{ $request->is('event') ? '_active' : '' }} ">
                                             {{ __('lang.event') }}
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('gallery') }}"
-                                            class="nav__menu-link nav__menu-link {{ $request->is('gallery') ? '_active' : '' }}">
+                                            class="nav__menu-link nav__menu-link {{ $request->is('gallery') || $request->is('album-detail/*') ? '_active' : '' }}">
                                             {{ __('lang.gallery') }}
                                         </a>
                                     </li>
@@ -452,7 +452,7 @@
     </div>
 
 
-    <!-- Modal developing data-toggle="modal" data-target="#p_success" -->
+    <!-- Modal developing data-toggle="modal" data-target="#p_developing" -->
     <div class="modal fade show" id="p-developing" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
         aria-hidden="true" aria-modal="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -504,6 +504,60 @@
     </div>
 
 
+    <!-- Modal member data-toggle="modal" data-target="#p-event-->
+    <div class="modal fade" id="p-event" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row justify-content-center section__row">
+                            <div class="col-sm-12 col-md-12 section__col">
+                                <div class=" row event__single">
+                                    <div class="col-lg-5 event__single-thumb">
+                                            <img src="{{ asset('Frontend/images/event/one.png') }}" alt="Image" />
+                                    </div>
+                                    <div class="col-lg-7 event__single-content">
+                                        <h5>Sự kiện Outing tháng 07/2024</h5>
+                                        <p class="font-regular fz__18">
+                                            <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                                        </p>
+                                        <p class="font-regular fz__18">
+                                            <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                                        </p>
+                                        <p class=" font-bold">
+                                            <i class="fas fa-ticket-alt"></i> Free
+                                        </p>
+
+                                        <h6 class="fz__20 cl__primary mt-5" >Nội dung:</h6>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Donec et eros et elit vulputate aliquet id elementum dui.
+                                            Donec in tortor fermentum, dictum tortor a, luctus sem. Ut tellus nisi,
+                                            Varius in pellentesque.
+                                        </p>
+                                        <a href="" id="togle-event" data-toggle="modal" data-target="#p-developing"  class="cmn-button">Đăng ký tham gia</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -634,6 +688,8 @@
 
         });
     </script>
+
+    
 </body>
 
 

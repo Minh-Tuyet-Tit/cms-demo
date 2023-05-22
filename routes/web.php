@@ -22,6 +22,8 @@ Route::prefix('/')->group(function () {
     Route::get('/gallery', [App\Http\Controllers\Controller::class, 'gallery']);
     Route::get('/members', [App\Http\Controllers\Controller::class, 'members']);
     Route::get('/about', [App\Http\Controllers\Controller::class, 'about']);
+    Route::get('/event', [App\Http\Controllers\Controller::class, 'event']);
+    Route::get('/album-detail/{id}', [App\Http\Controllers\Controller::class, 'albumDetail']);
 });
 
 
