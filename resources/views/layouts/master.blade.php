@@ -580,18 +580,7 @@
 
 
 
-    <script>
-        
-         $('#modelId').on('show.bs.modal', event => {
-           var button = $(event.relatedTarget);
-           var id = button.data('id')
-
-       
-            var modal = $('#modelId')
-            var modal_body = modal.find(".modal-body");
-            
-        });
-    </script>
+   
 </body>
 
 

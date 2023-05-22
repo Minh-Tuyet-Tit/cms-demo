@@ -18,7 +18,9 @@ class Controller extends BaseController
     {
         try {
             $category = CategoryPost::where('cat_name', 'Posts')->first();
-            $posts = Posts::latest('cat_id', $category->id)->take(10)->get();
+            
+            $posts = Posts::where('cat_id', $category->id)->take(10)->get();
+            // dd($posts);
         } catch (\Throwable $th) {
             
         }
