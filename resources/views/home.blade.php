@@ -21,7 +21,8 @@
                             feel welcome. Fully dedicated to golf lovers.
                         </p>
                         <div class="banner__content-cta">
-                            <a data-toggle="modal" data-target="#p-developing" href="" class="cmn-button">{{ __('lang.register') }}</a>
+                            <a data-toggle="modal" data-target="#p-developing" href=""
+                                class="cmn-button">{{ __('lang.register') }}</a>
 
                             <a href="{{ url('/about') }}"
                                 class="cmn-button cmn-button--secondary">{{ __('lang.about') }}</a>
@@ -192,7 +193,79 @@
     <!-- ==== / about section end ==== -->
 
 
+    <!-- ==== event section start ==== -->
+    <section class="section event wow fadeInUp" data-wow-duration="0.4s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section__header--secondary">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <div class="section__header--secondary__content">
+                                    <h5>Sự kiện</h5>
+                                    <h2>Sự kiện sắp diễn ra</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="section__header--secondary__cta">
+                                    <a href="event.html" class="cmn-button">See All Event</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center section__row">
+                <div class="col-sm-10 col-md-6 section__col">
+                    <div class="event__single">
+                        <div class="event__single-thumb">
+                            <a href="sign-up.html">
+                                <img src="{{ asset('Frontend/images/event/one.png') }}" alt="Image" />
+                            </a>
+                        </div>
+                        <div class="event__single-content">
+                            <h5>Tên sự kiện</h5>
+                            <p class="font-regular fz__18">
+                                <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                            </p>
+                            <p class="font-regular fz__18">
+                                <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                            </p>
+                            <p class="cl__primary font-bold">
+                                <i class="fas fa-ticket-alt"></i> Free
+                            </p>
 
+                            <a href="sign-up.html" class="cmn-button">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-6 section__col">
+                    <div class="event__single">
+                        <div class="event__single-thumb">
+                            <a href="sign-up.html">
+                                <img src="{{ asset('Frontend/images/event/one.png') }}" alt="Image" />
+                            </a>
+                        </div>
+                        <div class="event__single-content">
+                            <h5>Tên sự kiện</h5>
+                            <p class="font-regular fz__18">
+                                <i class="fas fa-calendar"></i> Thứ 2, 20-07-202310:00 AM
+                            </p>
+                            <p class="font-regular fz__18">
+                                <i class="golftio-location"></i> Sunshine City, KĐT Nam Thăng Long, Từ Liêm, Hà Nội
+                            </p>
+                            <p class="cl__primary font-bold">
+                                <i class="fas fa-ticket-alt"></i> Free
+                            </p>
+
+                            <a href="sign-up.html" class="cmn-button">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== / event section end ==== -->
 
 
     <!-- ==== team section start ==== -->
@@ -213,191 +286,81 @@
                 </div>
             </div>
             <div class="team__slider--secondary">
-                <div class="team__slider-card">
-                    <div class="team__slider-card__thumb">
-                        <img src="{{ asset('Frontend/images/team/one.png') }}" alt="Team" />
-                    </div>
-                    <div class="team__slider-card__content">
-                        <h5>Jerome Bell</h5>
-                        <p class="secondary-text">Golfer</p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#modelId">
-                                <i class="fas fa-eye"></i>
-                            </a>
+                @foreach ($members as $index => $member)
+                    <div class="team__slider-card">
+                        <div class="team__slider-card__thumb">
+                            <img src="{{ $member->image }}" alt="Team" />
+                        </div>
+                        <div class="team__slider-card__content">
+                            <h5>{{$member->post_title}}</h5>
+                            <p class="secondary-text">Golfer</p>
+                            <div class="social">
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" data-toggle="modal" data-id="{{$member}}" data-target="#modelId">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="team__slider-card">
-                    <div class="team__slider-card__thumb">
-                        <img src="{{ asset('Frontend/images/team/two.png') }}" alt="Team" />
-                    </div>
-                    <div class="team__slider-card__content">
-                        <h5>Mariah Tal</h5>
-                        <p class="secondary-text">Golfer</p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#modelId">
-                                <i class="fas fa-eye"></i>
-                            </a>
+                @endforeach
+                @foreach ($members as $index => $member)
+                    <div class="team__slider-card">
+                        <div class="team__slider-card__thumb">
+                            <img src="{{ $member->image }}" alt="Team" />
+                        </div>
+                        <div class="team__slider-card__content">
+                            <h5>{{$member->post_title}}</h5>
+                            <p class="secondary-text">Golfer</p>
+                            <div class="social">
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" data-toggle="modal" data-id="{{$member}}" data-target="#modelId">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="team__slider-card">
-                    <div class="team__slider-card__thumb">
-                        <img src="{{ asset('Frontend/images/team/three.png') }}" alt="Team" />
-                    </div>
-                    <div class="team__slider-card__content">
-                        <h5>Robert Fox</h5>
-                        <p class="secondary-text">Golfer</p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#modelId">
-                                <i class="fas fa-eye"></i>
-                            </a>
+                @endforeach
+                @foreach ($members as $index => $member)
+                    <div class="team__slider-card">
+                        <div class="team__slider-card__thumb">
+                            <img src="{{ $member->image }}" alt="Team" />
+                        </div>
+                        <div class="team__slider-card__content">
+                            <h5>{{$member->post_title}}</h5>
+                            <p class="secondary-text">Golfer</p>
+                            <div class="social">
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" data-toggle="modal" data-id="{{$member}}" data-target="#modelId">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="team__slider-card">
-                    <div class="team__slider-card__thumb">
-                        <img src="{{ asset('Frontend/images/team/four.png') }}" alt="Team" />
-                    </div>
-                    <div class="team__slider-card__content">
-                        <h5>Andrea Reed</h5>
-                        <p class="secondary-text">Golfer</p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#modelId">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team__slider-card">
-                    <div class="team__slider-card__thumb">
-                        <img src="{{ asset('Frontend/images/team/one.png') }}" alt="Team" />
-                    </div>
-                    <div class="team__slider-card__content">
-                        <h5>Jerome Bell</h5>
-                        <p class="secondary-text">Golfer</p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#modelId">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team__slider-card">
-                    <div class="team__slider-card__thumb">
-                        <img src="{{ asset('Frontend/images/team/two.png') }}" alt="Team" />
-                    </div>
-                    <div class="team__slider-card__content">
-                        <h5>Mariah Tal</h5>
-                        <p class="secondary-text">Golfer</p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#modelId">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team__slider-card">
-                    <div class="team__slider-card__thumb">
-                        <img src="{{ asset('Frontend/images/team/three.png') }}" alt="Team" />
-                    </div>
-                    <div class="team__slider-card__content">
-                        <h5>Robert Fox</h5>
-                        <p class="secondary-text">Golfer</p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#modelId">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team__slider-card">
-                    <div class="team__slider-card__thumb">
-                        <img src="{{ asset('Frontend/images/team/four.png') }}" alt="Team" />
-                    </div>
-                    <div class="team__slider-card__content">
-                        <h5>Andrea Reed</h5>
-                        <p class="secondary-text">Golfer</p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#modelId">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="row">
                 <div class="col-12">
@@ -463,7 +426,7 @@
 
 
 
-  
+
     <script>
         // document.addEventListener("DOMContentLoaded", function() {
 

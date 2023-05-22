@@ -20,11 +20,14 @@ class Controller extends BaseController
             $category = CategoryPost::where('cat_name', 'Posts')->first();
             
             $posts = Posts::where('cat_id', $category->id)->take(10)->get();
+
+            $category_m = CategoryPost::where('cat_name', 'Members')->first();
+            $members = Posts::where('cat_id', $category_m->id)->get();
             // dd($posts);
         } catch (\Throwable $th) {
             
         }
-        return view('home', compact('request', 'posts'));
+        return view('home', compact('request', 'posts', 'members'));
     }
 
     public function blog(Request $request)

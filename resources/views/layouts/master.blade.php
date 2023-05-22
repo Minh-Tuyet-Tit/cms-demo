@@ -580,7 +580,60 @@
 
 
 
-   
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            $('#modelId').on('show.bs.modal', event => {
+                var button = $(event.relatedTarget);
+                var id = button.data('id')
+                if (id) {
+
+                    var modal = $('#modelId')
+                    var modal_body = modal.find(".modal-body");
+                    modal_body[0].innerHTML = `
+                         <div class="container-fluid">
+                                <div class="row">
+        
+        
+                                    <div class="col-md-6">
+        
+                                        <div class="card-image text-center">
+                                            <img class="w-75" src="${id.image}"
+                                                alt="Image">
+                                        </div>
+        
+                                    </div>
+                                    <div class="col-md-6">
+        
+                                        <div class="member-info">
+                                            <div class="member-info__header">
+                                                <h5 class="fz__24 font-regular member-info__name">${id.post_title}</h5>
+                                                <p class="fz__24 font-regular member-info__text">Foundation</p>
+                                            </div>
+                                            <div class="member-info__desc">
+                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+                                                    nostrum
+                                                    similique delectus laboriosam eius ad maiores deserunt. Ipsa natus, amet
+                                                    nobis
+                                                    vitae repellendus laboriosam totam explicabo? Cupiditate dolor asperiores
+                                                    dolores.</p>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nulla.
+                                                    Suscipit tenetur deserunt adipisci rem dignissimos, quas dolorum ducimus aut
+                                                    velit numquam obcaecati, commodi nobis cupiditate. Molestias voluptatibus ut
+                                                    enim.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                    `;
+                }
+
+            });
+
+        });
+    </script>
 </body>
 
 
