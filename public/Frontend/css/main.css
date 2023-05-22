@@ -52,7 +52,7 @@
  ==== */
 
 :root {
-    --primary-color: #e6602c;
+    --primary-color: #FA662C;
 }
 
 @font-face {
@@ -360,7 +360,7 @@ img {
 }
 
 .bg-img {
-    background-color: #3f3f3f;
+    /* background-color: #3f3f3f; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -670,7 +670,7 @@ i {
 }
 
 .social a i {
-    color: #000000;
+    color: var(--primary-color);
 }
 
 .social a:hover {
@@ -2224,7 +2224,7 @@ i {
 
 .about {
     overflow-x: clip;
-    background-image: url("../images/player-bg.png");
+    /* background-image: url("../images/player-bg.png"); */
     background-repeat: no-repeat;
     background-size: auto;
     background-position: right 5% bottom 40px;
@@ -2256,8 +2256,8 @@ i {
     flex-direction: column;
     background-color: var(--primary-color);
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 30px;
+    right: 100px;
     direction: ltr;
 }
 
@@ -2490,7 +2490,7 @@ i {
     .about--secondary__single-item__icon
     i {
     font-size: 34px;
-    color: #000000;
+    color: var(--primary-color);
 }
 
 .about--tertiary {
@@ -3529,7 +3529,7 @@ i {
 
 .join--tertiary .section__content {
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     margin-top: 0px;
 }
 
@@ -4756,7 +4756,7 @@ i {
 }
 
 .blog .blog__content-meta p i {
-    color: #000000;
+    color: var(--primary-color);
 }
 
 .blog-list .blog-single {
@@ -4817,7 +4817,7 @@ i {
 
 
 .blog-details__inner .blog-details__content-meta p i {
-    color: #333;
+    color: var(--primary-color);
 }
 
 .blog-details__inner .blog-details__content {

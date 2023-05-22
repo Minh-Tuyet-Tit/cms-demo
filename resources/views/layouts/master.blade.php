@@ -116,7 +116,7 @@
                             </div>
                             <div class="nav__menu">
                                 <div class="nav__menu-logo d-flex d-xl-none">
-                                    <a href="index.html" class="text-center hide-nav">
+                                    <a href="{{ url('/') }}" class="text-center hide-nav">
                                         <img src="{{ asset('Frontend/images/logo.png') }}" alt="Logo" />
                                     </a>
                                     <a href="javascript:void(0)" class="nav__menu-close">
@@ -127,13 +127,13 @@
                                 <ul class="nav__menu-items">
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('/') }}"
-                                            class="nav__menu-link nav__menu-link {{ $request->is('/') ? 'active' : '' }}">
+                                            class="nav__menu-link nav__menu-link {{ $request->is('/') ? '_active' : '' }}">
                                             {{ __('lang.home') }}
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('/about') }}"
-                                            class="nav__menu-link nav__menu-link {{ $request->is('about') ? 'active' : '' }}">
+                                            class="nav__menu-link nav__menu-link {{ $request->is('about') ? '_active' : '' }}">
                                             {{ __('lang.about') }}
                                         </a>
                                         {{-- <ul class="nav__dropdown">
@@ -147,14 +147,14 @@
                                         </ul> --}}
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{ url('blog/Posts') }}"
-                                            class="nav__menu-link nav__menu-link {{ $request->is('blog/Posts') ? 'active' : '' }}">
+                                        <a href="{{ url('blog') }}"
+                                            class="nav__menu-link nav__menu-link {{ $request->is('blog') ? '_active' : '' }}">
                                             Blog
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{ url('members/Members') }}"
-                                            class="nav__menu-link nav__menu-link {{ $request->is('members/Members') ? 'active' : '' }}">
+                                        <a href="{{ url('members') }}"
+                                            class="nav__menu-link nav__menu-link {{ $request->is('members') ? '_active' : '' }}">
                                             {{ __('lang.member') }}
                                         </a>
                                     </li>
@@ -165,7 +165,7 @@
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('gallery') }}"
-                                            class="nav__menu-link nav__menu-link {{ $request->is('gallery') ? 'active' : '' }}">
+                                            class="nav__menu-link nav__menu-link {{ $request->is('gallery') ? '_active' : '' }}">
                                             {{ __('lang.gallery') }}
                                         </a>
                                     </li>
@@ -197,8 +197,18 @@
                                     {{-- <a href="sign-in.html" class="cmn-button cmn-button--secondary">Sign In</a>
                                     <a href="sign-up.html" class="cmn-button">Sign Up</a> --}}
                                     {{-- <a href="" style="color: #333"> VI<i style="font-size: 16px; color: #818181;" class="fas fa-chevron-down"></i></a> --}}
-                                    <i data-toggle="modal" data-target="#p-login" style="color: #696969"
-                                        class="fas fa-user-circle fz__28"></i>
+
+                                    <div class="dropdown">
+                                        <button class="btn dropdown" type="button" id="dropdownMenuButton1"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i style="color: #696969" class="fas fa-user-circle fz__28"></i>
+                                        </button>
+                                        <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                                            <li><a data-toggle="modal" data-target="#p-login"
+                                                    class="dropdown-item cl__primary">Tài khoản</a></li>
+                                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <button class="nav__bar d-block d-xl-none">
                                     <span class="icon-bar top-bar"></span>
@@ -221,45 +231,40 @@
     <!-- ==== footer start ==== -->
     <footer class="footer">
         <div class="container">
-            {{-- <div class="row section__row">
+            <div class="row section__row">
                 <div class="col-md-6 col-lg-4 col-xl-3 section__col">
                     <div class="footer__single">
-                       
+                        <a href="{{ url('/') }}">
+                            <img style="max-width: 110px;" src="{{ asset('Frontend/images/logo-light.png') }}"
+                                alt="Logo">
+                        </a>
                         <div class="footer__single-content">
                             <p>
                                 Lorem Ipsum is simply dummy text of the
                                 printing and typesetting industry. Lorem
                                 Ipsum has been the industry...
                             </p>
-                            <div class="social">
-                                <a href="#">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa-brands fa-square-instagram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-2 col-xl-3 section__col">
                     <div class="footer__single">
-                        <h5>Quick Links</h5>
+                        <h5>Liên kết</h5>
                         <div class="footer__single-content">
                             <ul>
-                                <li><a href="index.html">Trang chủ</a></li>
+                                <li><a href="{{ url('/') }}">Trang chủ</a></li>
                                 <li>
-                                    <a href="facility.html">Dịch vụ</a>
+                                    <a href="{{ url('blog/Posts') }}">Blog</a>
                                 </li>
-                                <li><a href="shop.html">Liên hệ</a></li>
+                                <li><a href="{{ url('about') }}">Về chúng tôi</a></li>
                                 <li>
-                                    <a href="contact-us.html">Đăng ký tư vấn</a>
+                                    <a href="{{ url('event') }}">Sự kiện</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('members') }}">Thành viên</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('gallery') }}">Thư viện ảnh</a>
                                 </li>
                             </ul>
                         </div>
@@ -267,7 +272,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 col-xl-3 section__col">
                     <div class="footer__single">
-                        <h5>Address</h5>
+                        <h5>Liên hệ</h5>
                         <div class="footer__single-content">
                             <div class="footer__single-content__group">
                                 <p>079 567 1476</p>
@@ -293,17 +298,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 col-xl-3 section__col">
-                    <h5>Newsletter</h5>
+                    <h5>Đăng ký</h5>
                     <div class="footer__single">
                         <div class="footer__single-content">
                             <p>
-                                Subscribe our newsletter to get our latest
-                                update & news
+                                Đăng ký để nhận các bản cập nhật và tin tức mới nhất của chúng tôi
                             </p>
                             <form action="#" method="post" name="newsletterForm">
                                 <div class="newsletter">
-                                    <input type="email" name="news-mail" id="newsMail"
-                                        placeholder="Your email address" required />
+                                    <input type="email" name="news-mail" id="newsMail" placeholder="Email"
+                                        required />
                                     <button type="submit">
                                         <i class="golftio-paper-plane"></i>
                                     </button>
@@ -312,17 +316,23 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
             <hr />
             <div class="row">
                 <div class="col-12">
                     <div class="copyright">
                         <div class="row align-items-center">
-                            <div class="col-lg-12 text-center">
+                            <div class="col-lg-6">
                                 <p>
-                                    Copyright &copy;
-                                    <span id="copyYear"></span> LSD Technology
+                                    Copyright © 2023 SSGC. Design by LSD Technology
                                 </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><a href="support.html">Support</a></li>
+                                    <li><a href="terms-conditions.html">Terms of Use</a></li>
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -332,7 +342,7 @@
     </footer>
 
 
-    <!-- Modal member-->
+    <!-- Modal member data-toggle="modal" data-target="#modelId-->
     <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
         aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -391,7 +401,7 @@
     </div>
 
 
-    <!-- Modal login -->
+    <!-- Modal login data-toggle="modal" data-target="#p-login"-->
     <div class="modal fade" id="p-login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
         aria-hidden="true" aria-modal="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -442,7 +452,7 @@
     </div>
 
 
-    <!-- Modal developing -->
+    <!-- Modal developing data-toggle="modal" data-target="#p_success" -->
     <div class="modal fade show" id="p-developing" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
         aria-hidden="true" aria-modal="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -459,6 +469,33 @@
                             <img src="{{ asset('Frontend/images/p-developing.png') }}" alt="">
                             <h5>Tính năng đang phát triển <br>
                                 Bạn vui lòng quay lại sau</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal success data-toggle="modal" data-target="#p-success"-->
+    <div class="modal fade show" id="p-success" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true" aria-modal="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="modal-header">
+                            <h5 class="modal-title"></h5>
+                            <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                            </button>
+                        </div>
+                        <div class="success">
+                            <img src="{{ asset('Frontend/images/success.png') }}" alt="">
+                            <h5 class="mb-4">Đã gửi thành công</h5>
+                            <p>Thông tin của Bạn đã được gửi và đang chờ phê duyệt. Chúng tôi sẽ phản hồi yêu cầu trong
+                                vòng 24 giờ
+                                làm việc.
+                                Bạn vui lòng kiểm tra lại Email sau thời gian trên.</p>
                         </div>
                     </div>
                 </div>
@@ -540,6 +577,21 @@
             })
         </script>
     @endif
+
+
+
+    <script>
+        
+         $('#modelId').on('show.bs.modal', event => {
+           var button = $(event.relatedTarget);
+           var id = button.data('id')
+
+       
+            var modal = $('#modelId')
+            var modal_body = modal.find(".modal-body");
+            
+        });
+    </script>
 </body>
 
 

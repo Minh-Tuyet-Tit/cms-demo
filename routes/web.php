@@ -15,12 +15,12 @@ Route::get('/language/{lang}', [App\Http\Controllers\LanguageControler::class, '
 Route::prefix('/')->group(function () {
     Route::get('/', [App\Http\Controllers\Controller::class, 'index']);
 
-    Route::get('/blog/{slug}', [App\Http\Controllers\Controller::class, 'blog']);
+    Route::get('/blog', [App\Http\Controllers\Controller::class, 'blog']);
 
     Route::get('/blog-detail/{id}', [App\Http\Controllers\Controller::class, 'blog_detail']);
 
     Route::get('/gallery', [App\Http\Controllers\Controller::class, 'gallery']);
-    Route::get('/members/{slug}', [App\Http\Controllers\Controller::class, 'members']);
+    Route::get('/members', [App\Http\Controllers\Controller::class, 'members']);
     Route::get('/about', [App\Http\Controllers\Controller::class, 'about']);
 });
 

@@ -304,22 +304,22 @@
                             </div>
                         </div>
                         <div class="comment-form">
-                            <h5>Write a Comment</h5>
+                            <h5>Viết bình luận</h5>
                             <form action="#" method="post">
                                 <div class="input-group">
                                     <div class="input-single">
                                         <input type="text" name="comment-name" id="commentName" required
-                                            placeholder="Enter Your Name...">
+                                            placeholder="Tên">
                                     </div>
                                     <div class="input-single">
                                         <input type="email" name="comment-email" id="commentEmail" required
-                                            placeholder="Enter Your Email...">
+                                            placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="input-single">
-                                    <textarea name="comment-message" id="commentMessage" placeholder="Write a comment..."></textarea>
+                                    <textarea name="comment-message" id="commentMessage" placeholder="Viết bình luận..."></textarea>
                                 </div>
-                                <button type="submit" class="cmn-button">Submit Now</button>
+                                <button type="submit" class="cmn-button">Bình luận</button>
                             </form>
                         </div>
                     </div>
@@ -381,7 +381,7 @@
                                     <p>{{ cutStr($post->summary, 0, 60) }}</p>
 
                                     <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
-                                        class="cmn-button cmn-button--secondary">Read more</a>
+                                        class="cmn-button cmn-button--secondary">Đọc thêm</a>
                                 </div>
                             </div>
                         @endforeach

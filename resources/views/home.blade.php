@@ -402,7 +402,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="text-center">
-                        <a href="{{ url('/members/Members') }}" class="cmn-button">{{ __('lang.see_all') }}</a>
+                        <a href="{{ url('/members') }}" class="cmn-button">{{ __('lang.see_all') }}</a>
                     </div>
                 </div>
             </div>

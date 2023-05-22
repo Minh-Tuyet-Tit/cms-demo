@@ -49,23 +49,6 @@
                 <a href="blog.html" class="cmn-button cmn-button--secondary" title="Blog">Shop</a>
             </div>
         </div>
-        <div class="sidebar__single">
-            <h5>Follow Our Journey</h5>
-            <hr>
-            <div class="social justify-content-start">
-                <a href="#">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-square-instagram"></i>
-                </a>
-            </div>
-        </div>
+
     </div>
 </div>

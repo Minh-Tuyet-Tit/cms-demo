@@ -1,5 +1,6 @@
 :root {
-    --primary-color: #e6602c;
+    --primary-color: #FA662C;
+    --popup-bg:#FFEFD9;
 }
 
 
@@ -23,11 +24,14 @@
 .fz__20{
     font-size: 20px !important;
 }
+.fz__38{
+    font-size: 38px !important;
+}
 .fz__48{
     font-size: 48px !important;
 }
 
-.active{
+._active{
     color: var(--primary-color) !important;
 }
 
@@ -136,7 +140,7 @@ td img {
 
 
 .footer{
-    background-color: rgba(12, 169, 64, 0.05);
+    background-color: #FF8C36;
 }
 
 .footer a,
@@ -144,7 +148,7 @@ td img {
 .footer i,
 .footer h5 {
     
-    color: #000000 !important;
+    color: white !important;
 }
 
 .footer input{
@@ -152,9 +156,14 @@ td img {
     border: 1px solid #E3E3E3;
 }
 
-.footer button{
-    background-color: var(--primary-color);
-    color: white;
+
+
+.footer button i{
+    color: var(--primary-color) !important;
+}
+
+.footer hr{
+    background-color: #ffffff;
 }
 
 
@@ -215,7 +224,7 @@ td img {
 }
 
 #modelId .modal-content{
-    background-color: #F5FBF5 !important;
+    background-color: var(--popup-bg) !important;
 }
 
 /* pop login */
@@ -226,7 +235,7 @@ td img {
 
 
 #p-login .modal-body{
-    background-color: #F5FBF5 !important;
+    background-color: var(--popup-bg) !important;
     border-radius: 16px;
     padding: 0 !important;
 }
@@ -285,7 +294,7 @@ td img {
 }
 
 #p-developing .modal-content{
-    background-color: #F5FBF5 !important;
+    background-color: var(--popup-bg) !important;
     padding-bottom: 50px;
 }
 
@@ -296,6 +305,28 @@ td img {
 }
 
 #p-developing .developing img{
+    width: 410px;
+    margin-bottom: 83px;
+}
+
+/*poup success */
+
+#p-success .modal-header{
+    border-bottom: none ;
+}
+
+#p-success .modal-content{
+    background-color: var(--popup-bg) !important;
+    padding-bottom: 50px;
+}
+
+
+#p-success .success{
+    text-align: center;
+
+}
+
+#p-success .success img{
     width: 423px;
     margin-bottom: 83px;
 }

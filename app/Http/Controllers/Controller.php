@@ -18,7 +18,6 @@ class Controller extends BaseController
     {
         try {
             $category = CategoryPost::where('cat_name', 'Posts')->first();
-            // $posts = Posts::where('cat_id', $category->id)->get();
             $posts = Posts::latest('cat_id', $category->id)->take(10)->get();
         } catch (\Throwable $th) {
             
@@ -26,11 +25,11 @@ class Controller extends BaseController
         return view('home', compact('request', 'posts'));
     }
 
-    public function blog(Request $request, $slug)
+    public function blog(Request $request)
     {
         try {
 
-            $category = CategoryPost::where('cat_name', $slug)->first();
+            $category = CategoryPost::where('cat_name', 'Posts')->first();
             $posts = Posts::where('cat_id', $category->id)->get();
         } catch (\Throwable $th) {
             return redirect()->back()->with('fail', 'không lấy đc post');
@@ -61,10 +60,10 @@ class Controller extends BaseController
         return view('Frontend.Gallery', compact('request'));
     }
 
-    public function members(Request $request, $slug)
+    public function members(Request $request)
     {
         try {
-            $category = CategoryPost::where('cat_name', $slug)->first();
+            $category = CategoryPost::where('cat_name', 'Members')->first();
             $members = Posts::where('cat_id', $category->id)->get();
         } catch (\Throwable $th) {
             return redirect()->back();
