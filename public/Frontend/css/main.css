@@ -669,6 +669,10 @@ i {
     font-size: 16px;
 }
 
+.social a:hover{
+    border: none;
+}
+
 .social a i {
     color: var(--primary-color);
 }
@@ -1486,7 +1490,7 @@ i {
 }
 
 .header .nav__menu-link {
-    padding: 10px 12px;
+    padding: 10px 16px;
     color: #3f3f3f;
     font-weight: 500;
 }
@@ -1972,7 +1976,7 @@ i {
 /* đợi ảnh */
 
 .banner--inner {
-    padding: 196px 0px 80px;
+    padding: 252px 0px 24px;
     position: relative;
     background-image: url("../images/banner/her.png");
     /* background-color: rgba(0, 0, 0, 0.2); */
@@ -2366,7 +2370,7 @@ i {
 }
 
 .about--secondary {
-    background-color: rgba(12, 169, 64, 0.05);
+    background-color: #FFEFD9;
     overflow-x: clip;
 }
 
@@ -2447,7 +2451,7 @@ i {
 }
 
 .about--secondary .about--secondary__modal img {
-    border: 10px solid white;
+    border: 10px solid var(--primary-color);
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -2596,7 +2600,7 @@ i {
 
 .club {
     overflow-x: clip;
-    background-color: #0ca9400d;
+    background-color: #FFEFD9;
     background-repeat: no-repeat;
     background-size: auto;
     background-position: left 40px bottom 70px;
@@ -4797,7 +4801,11 @@ i {
 }
 
 .blog-details__inner .blog-details__meta >p {
-    margin: 10px 0;
+    margin-bottom: 24px;
+}
+.blog-details__inner .blog-details__meta >p img {
+    width: 100%;
+    margin-bottom: 24px;
 }
 
 .blog-details__inner .blog-details__content-meta {
@@ -4821,7 +4829,7 @@ i {
     -ms-flex-align: center;
     align-items: center;
     gap: 10px;
-    margin: 10px 0 !important;
+    margin-bottom: 24px !important;
 }
 
 
@@ -5151,9 +5159,13 @@ i {
     background: transparent;
 }
 
+.sidebar .sidebar__single .search_form input::placeholder{
+    color: #D1D0D9;
+}
+
 .sidebar .sidebar__single .search_form button {
     background-color: transparent;
-    color: var(--primary-color);
+    color: #D1D0D9;
 }
 
 .sidebar .sidebar__tab {

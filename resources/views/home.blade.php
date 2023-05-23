@@ -288,7 +288,7 @@
             <div class="team__slider--secondary">
                 @foreach ($members as $index => $member)
                     <div class="team__slider-card">
-                        <div class="team__slider-card__thumb">
+                        <div data-toggle="modal" data-id="{{$member}}" data-target="#modelId" class="team__slider-card__thumb">
                             <img src="{{ $member->image }}" alt="Team" />
                         </div>
                         <div class="team__slider-card__content">
@@ -313,7 +313,7 @@
                 @endforeach
                 @foreach ($members as $index => $member)
                     <div class="team__slider-card">
-                        <div class="team__slider-card__thumb">
+                        <div data-toggle="modal" data-id="{{$member}}" data-target="#modelId" class="team__slider-card__thumb">
                             <img src="{{ $member->image }}" alt="Team" />
                         </div>
                         <div class="team__slider-card__content">
@@ -338,7 +338,7 @@
                 @endforeach
                 @foreach ($members as $index => $member)
                     <div class="team__slider-card">
-                        <div class="team__slider-card__thumb">
+                        <div data-toggle="modal" data-id="{{$member}}" data-target="#modelId" class="team__slider-card__thumb">
                             <img src="{{ $member->image }}" alt="Team" />
                         </div>
                         <div class="team__slider-card__content">
@@ -375,8 +375,7 @@
 
 
     <!-- ==== gallery section start ==== -->
-    <div class="section gallery wow fadeInUp" data-wow-duration="0.4s"
-        style="background-color: rgba(12, 169, 64, 0.05);">
+    <div class="section gallery wow fadeInUp" data-wow-duration="0.4s">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">

@@ -47,7 +47,8 @@ class Controller extends BaseController
     {
         try {
             $post = Posts::findOrFail($id);
-            $posts = Posts::latest()->take(5)->get();
+            $category = CategoryPost::where('cat_name', 'Posts')->first();
+            $posts = Posts::where('cat_id', $category->id)->get();
         } catch (\Throwable $th) {
             return redirect()->back();
         }

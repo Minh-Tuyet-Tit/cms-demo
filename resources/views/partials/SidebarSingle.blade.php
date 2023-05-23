@@ -5,7 +5,7 @@
             <hr>
             <form action="{{ url('/api/search') }}" method="get">
                 <div class="search_form">
-                    <input type="text" name="search" id="post-Search" placeholder="Search">
+                    <input type="text" name="search" id="post-Search" placeholder="Tìm kiếm">
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>

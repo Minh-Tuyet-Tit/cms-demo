@@ -134,7 +134,7 @@
                     <div class="section__content">
                         <h2 class="section__content-title fz__38">{{ __('lang.register') }}</h2>
                         <div class="join-club__form">
-                            <form action="#" method="post" name="joinClubForm">
+                            <div action="#" method="post" name="joinClubForm">
                                 <div class="input-group">
                                     <div class="input-single w-100">
                                         <input type="text" name="user_name" id="userName" required placeholder="Tên">
@@ -150,8 +150,8 @@
                                 <div class="input-single">
                                     <textarea name="user-message" id="userMessage" placeholder="Mô tả ngắn"></textarea>
                                 </div>
-                                <button data-toggle="modal" data-target="#p-success" type="submit" class="cmn-button">Gửi yêu cầu</button>
-                            </form>
+                                <button data-toggle="modal" data-target="#p-developing" class="cmn-button" >Gửi yêu cầu</button>
+                            </div>
                         </div>
                     </div>
                 </div>

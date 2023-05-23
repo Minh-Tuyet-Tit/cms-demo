@@ -176,4 +176,24 @@
     </section>
     <!-- ==== / event section end ==== -->
 
+
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function(event) {
+
+             $('#p-developing').on('show.bs.modal',e=>{
+               
+                $('#p-event').hide()
+             })
+
+             $('#p-developing').on('hide.bs.modal',e=>{
+                
+                var modal_backdrop = document.querySelector('.modal-backdrop')
+                document.body.classList.remove('modal-open')
+                document.body.removeChild(modal_backdrop)
+             })
+        });
+    </script>
+
 @stop()

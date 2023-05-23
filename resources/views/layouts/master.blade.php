@@ -64,7 +64,7 @@
 
 
 <body>
-    <div id="preloader">
+    {{-- <div id="preloader">
         <div id="ctn-preloader" class="ctn-preloader">
             <div class="animation-preloader">
                 <div class="spinner"></div>
@@ -101,7 +101,7 @@
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
         </div>
-    </div>
+    </div> --}}
 
     <header class="header">
         <div class="container">
@@ -148,7 +148,7 @@
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
                                         <a href="{{ url('blog') }}"
-                                            class="nav__menu-link nav__menu-link {{ $request->is('blog')|| $request->is('blog-detail/*') ? '_active' : '' }}">
+                                            class="nav__menu-link nav__menu-link {{ $request->is('blog') || $request->is('blog-detail/*') ? '_active' : '' }}">
                                             Blog
                                         </a>
                                     </li>
@@ -159,7 +159,8 @@
                                         </a>
                                     </li>
                                     <li class="nav__menu-item nav__menu-item--dropdown">
-                                        <a href="{{url('event')}}" class="nav__menu-link nav__menu-link {{ $request->is('event') ? '_active' : '' }} ">
+                                        <a href="{{ url('event') }}"
+                                            class="nav__menu-link nav__menu-link {{ $request->is('event') ? '_active' : '' }} ">
                                             {{ __('lang.event') }}
                                         </a>
                                     </li>
@@ -204,9 +205,9 @@
                                             <i style="color: #696969" class="fas fa-user-circle fz__28"></i>
                                         </button>
                                         <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-                                            <li><a data-toggle="modal" data-target="#p-login"
-                                                    class="dropdown-item cl__primary">Tài khoản</a></li>
-                                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                                            <li class="drop-login"><a data-toggle="modal" data-target="#p-login"
+                                                    class="dropdown-item"><span><i class="fas fa-cog"></i></span> Đăng nhập</a></li>
+                                            {{-- <li><a class="dropdown-item" href="#">Đăng xuất</a></li> --}}
                                         </ul>
                                     </div>
                                 </div>
@@ -239,7 +240,7 @@
                                 alt="Logo">
                         </a>
                         <div class="footer__single-content">
-                            <p>
+                            <p class="fz__16 p-3">
                                 Lorem Ipsum is simply dummy text of the
                                 printing and typesetting industry. Lorem
                                 Ipsum has been the industry...
@@ -247,14 +248,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-2 col-xl-3 section__col">
+                <div class="col-md-6 col-lg-2 col-xl-2 section__col">
                     <div class="footer__single">
                         <h5>Liên kết</h5>
                         <div class="footer__single-content">
-                            <ul>
+                            <ul class="">
                                 <li><a href="{{ url('/') }}">Trang chủ</a></li>
                                 <li>
-                                    <a href="{{ url('blog/Posts') }}">Blog</a>
+                                    <a href="{{ url('blog') }}">Blog</a>
                                 </li>
                                 <li><a href="{{ url('about') }}">Về chúng tôi</a></li>
                                 <li>
@@ -304,15 +305,17 @@
                             <p>
                                 Đăng ký để nhận các bản cập nhật và tin tức mới nhất của chúng tôi
                             </p>
-                            <form action="#" method="post" name="newsletterForm">
+                            <div action="#" method="post" name="newsletterForm">
                                 <div class="newsletter">
-                                    <input type="email" name="news-mail" id="newsMail" placeholder="Email"
+                                    <input type="text" name="news-mail" id="newsMail" placeholder="Email"
                                         required />
-                                    <button type="submit">
+                                    <button data-toggle="modal" data-target="#p-developing">
                                         <i class="golftio-paper-plane"></i>
                                     </button>
                                 </div>
-                            </form>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -354,41 +357,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-
-
-                            <div class="col-md-6">
-
-                                <div class="card-image text-center">
-                                    <img class="w-75" src="{{ asset('Frontend/images/gallery/3.png') }}"
-                                        alt="Image">
-                                </div>
-
-                            </div>
-                            <div class="col-md-6">
-
-                                <div class="member-info">
-                                    <div class="member-info__header">
-                                        <h5 class="fz__24 font-regular member-info__name">ĐOÀN VĂN NĂNG</h5>
-                                        <p class="fz__24 font-regular member-info__text">Foundation</p>
-                                    </div>
-                                    <div class="member-info__desc">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
-                                            nostrum
-                                            similique delectus laboriosam eius ad maiores deserunt. Ipsa natus, amet
-                                            nobis
-                                            vitae repellendus laboriosam totam explicabo? Cupiditate dolor asperiores
-                                            dolores.</p>
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nulla.
-                                            Suscipit tenetur deserunt adipisci rem dignissimos, quas dolorum ducimus aut
-                                            velit numquam obcaecati, commodi nobis cupiditate. Molestias voluptatibus ut
-                                            enim.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <div class="modal-header">
@@ -452,7 +421,7 @@
     </div>
 
 
-    <!-- Modal developing data-toggle="modal" data-target="#p_developing" -->
+    <!-- Modal developing data-toggle="modal" data-target="#p-developing" -->
     <div class="modal fade show" id="p-developing" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
         aria-hidden="true" aria-modal="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -504,7 +473,7 @@
     </div>
 
 
-    <!-- Modal member data-toggle="modal" data-target="#p-event-->
+    <!-- Modal event data-toggle="modal" data-target="#p-event-->
     <div class="modal fade" id="p-event" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
         aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -535,7 +504,7 @@
                                             <i class="fas fa-ticket-alt"></i> Free
                                         </p>
 
-                                        <h6 class="fz__20 cl__primary mt-5" >Nội dung:</h6>
+                                        <h6 class="fz__20 cl__primary font-regular mt-5" >Nội dung:</h6>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Donec et eros et elit vulputate aliquet id elementum dui.
@@ -662,19 +631,16 @@
                                         <div class="member-info">
                                             <div class="member-info__header">
                                                 <h5 class="fz__24 font-regular member-info__name">${id.post_title}</h5>
-                                                <p class="fz__24 font-regular member-info__text">Foundation</p>
+                                                <p class="fz__20 font-regular member-info__text">Foundation</p>
                                             </div>
                                             <div class="member-info__desc">
                                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
                                                     nostrum
-                                                    similique delectus laboriosam eius ad maiores deserunt. Ipsa natus, amet
-                                                    nobis
-                                                    vitae repellendus laboriosam totam explicabo? Cupiditate dolor asperiores
-                                                    dolores.</p>
+                                
+                                                    </p>
                                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nulla.
-                                                    Suscipit tenetur deserunt adipisci rem dignissimos, quas dolorum ducimus aut
-                                                    velit numquam obcaecati, commodi nobis cupiditate. Molestias voluptatibus ut
-                                                    enim.</p>
+                                                    Suscipit tenetur deserunt adipisci rem dignissimos, quas dolorum
+                                                    </p>
                                             </div>
                                         </div>
                                     </div>
@@ -689,7 +655,7 @@
         });
     </script>
 
-    
+
 </body>
 
 

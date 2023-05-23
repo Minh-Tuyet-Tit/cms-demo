@@ -78,10 +78,10 @@
                                     <li>
                                         <button><i class="fa-solid fa-angle-left"></i></button>
                                     </li>
-                                    <li><a href="blog.html">1</a></li>
-                                    <li><a href="blog.html">2</a></li>
-                                    <li><a href="blog.html">3</a></li>
-                                    <li><a href="blog.html">...</a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">...</a></li>
                                     <li>
                                         <button><i class="fa-solid fa-angle-right"></i></button>
                                     </li>

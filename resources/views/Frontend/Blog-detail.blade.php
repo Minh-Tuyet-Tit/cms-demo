@@ -59,7 +59,7 @@
 
 
                         <div class="blog-details__comment">
-                            <h4>Comments <span>(03)</span></h4>
+                            <h4>Bình luận <span>(23)</span></h4>
                             <div class="blog-comment-single">
                                 <div class="blog-comment__thumb">
                                     <img src="{{ asset('Frontend/images/blog/author-one.png') }}" alt="Author">
@@ -300,7 +300,7 @@
                                 </div>
                             </div>
                             <div class="section__cta">
-                                <a href="blog-details.html" class="cmn-button">View All Comment</a>
+                                <a href="blog-details.html" class="cmn-button">Xem thêm bình luận</a>
                             </div>
                         </div>
                         <div class="comment-form">
@@ -339,7 +339,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-8">
                                 <div class="section__header--secondary__content">
-                                    <h2>More Related News</h2>
+                                    <h2>Bài viết khác</h2>
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -378,7 +378,7 @@
                                         <p><i class="fa-solid fa-calendar-week"></i> 15-12-2022</p>
                                     </div>
 
-                                    <p>{{ cutStr($post->summary, 0, 60) }}</p>
+                                    <p>{{ cutStr($post->summary, 0, 60) . '...' }}</p>
 
                                     <a href="{{ url('blog-detail/' . $post->id) }}" title="Read More"
                                         class="cmn-button cmn-button--secondary">Đọc thêm</a>
@@ -394,59 +394,5 @@
     </section>
     <!-- ==== / related news end ==== -->
 
-    <!-- ==== sponsor section start ==== -->
-    <div class="sponsor wow fadeInUp" data-wow-duration="0.4s">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="sponsor__inner">
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/one.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/two.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/three.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/four.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/five.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/six.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/one.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/one.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/two.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/three.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/four.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/five.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/six.png') }}" alt="Sponsor">
-                        </div>
-                        <div class="sponsor__inner-card">
-                            <img src="{{ asset('Frontend/images/sponsor/one.png') }}" alt="Sponsor">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ==== / sponsor section end ==== -->
 
 @stop()

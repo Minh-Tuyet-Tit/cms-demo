@@ -40,7 +40,7 @@
                 @foreach ($members as $index => $member)
                     <div class="col-lg-4">
                         <div class="team__slider-card">
-                            <div class="team__slider-card__thumb">
+                            <div data-toggle="modal" data-target="#modelId" class="team__slider-card__thumb">
                                 <img src="{{ $member->image }}" alt="Team" />
                             </div>
                             <div class="team__slider-card__content">
@@ -68,7 +68,7 @@
                 @foreach ($members as $index => $member)
                     <div class="col-lg-4">
                         <div class="team__slider-card">
-                            <div class="team__slider-card__thumb">
+                            <div data-toggle="modal" data-target="#modelId" class="team__slider-card__thumb">
                                 <img src="{{ $member->image }}" alt="Team" />
                             </div>
                             <div class="team__slider-card__content">
@@ -96,7 +96,7 @@
                 @foreach ($members as $index => $member)
                     <div class="col-lg-4">
                         <div class="team__slider-card">
-                            <div class="team__slider-card__thumb">
+                            <div data-toggle="modal" data-target="#modelId" class="team__slider-card__thumb">
                                 <img src="{{ $member->image }}" alt="Team" />
                             </div>
                             <div class="team__slider-card__content">
@@ -124,7 +124,7 @@
                 @foreach ($members as $index => $member)
                     <div class="col-lg-4">
                         <div class="team__slider-card">
-                            <div class="team__slider-card__thumb">
+                            <div data-toggle="modal" data-target="#modelId" class="team__slider-card__thumb">
                                 <img src="{{ $member->image }}" alt="Team" />
                             </div>
                             <div class="team__slider-card__content">
@@ -180,7 +180,7 @@
 
                 <div class="col-lg-4">
                     <div class="team__slider-card">
-                        <div class="team__slider-card__thumb">
+                        <div data-toggle="modal" data-target="#modelId" class="team__slider-card__thumb">
                             <img src="{{ asset('Frontend/images/team/one.png') }}" alt="Team" />
                         </div>
                         <div class="team__slider-card__content">
@@ -196,7 +196,7 @@
                                 <a href="#">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" data-toggle="modal" data-target="#modelId">
+                                <a href="#" data-toggle="modal" data-target="#modelId" >
                                     <i class="fas fa-eye"></i>
                                 </a>
                             </div>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="team__slider-card">
-                        <div class="team__slider-card__thumb">
+                        <div data-toggle="modal" data-target="#modelId" class="team__slider-card__thumb">
                             <img src="{{ asset('Frontend/images/team/one.png') }}" alt="Team" />
                         </div>
                         <div class="team__slider-card__content">
@@ -221,7 +221,7 @@
                                 <a href="#">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" data-toggle="modal" data-target="#modelId">
+                                <a href="#" data-toggle="modal" data-target="#modelId" >
                                     <i class="fas fa-eye"></i>
                                 </a>
                             </div>
@@ -230,7 +230,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="team__slider-card">
-                        <div class="team__slider-card__thumb">
+                        <div data-toggle="modal" data-target="#modelId" class="team__slider-card__thumb">
                             <img src="{{ asset('Frontend/images/team/one.png') }}" alt="Team" />
                         </div>
                         <div class="team__slider-card__content">
@@ -246,7 +246,7 @@
                                 <a href="#">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" data-toggle="modal" data-target="#modelId">
+                                <a href="#" data-toggle="modal" data-target="#modelId" >
                                     <i class="fas fa-eye"></i>
                                 </a>
                             </div>

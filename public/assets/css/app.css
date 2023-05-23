@@ -3,6 +3,10 @@
     --popup-bg: #ffefd9;
 }
 
+* {
+    letter-spacing: 0 !important;
+}
+
 /* font-size */
 
 .fz__24 {
@@ -153,6 +157,10 @@ td img {
     border: 1px solid #e3e3e3;
 }
 
+.footer input::placeholder {
+    color: #ffffff;
+}
+
 .footer button i {
     color: var(--primary-color) !important;
 }
@@ -194,7 +202,7 @@ td img {
 }
 
 #modelId .member-info .member-info__header .member-info__name {
-    font-weight: 400 !important;
+    font-weight: 700 !important;
 }
 
 #modelId .member-info .member-info__header {
@@ -289,7 +297,7 @@ td img {
 }
 
 #p-developing .developing img {
-    width: 410px;
+    max-width: 300px;
     margin-bottom: 83px;
 }
 
@@ -309,7 +317,7 @@ td img {
 }
 
 #p-success .success img {
-    width: 423px;
+    max-width: 300px;
     margin-bottom: 83px;
 }
 
@@ -364,12 +372,10 @@ td img {
     -ms-flex-pack: center;
     justify-content: center;
     color: var(--primary-color);
-    background-color: #ffffff;
-    border: 1px solid rgba(12, 169, 64, 0.15);
+    background-color: transparent;
+    border: 1px solid #bebebe;
     border-radius: 3px;
 }
-
-
 
 /* album */
 
@@ -379,7 +385,7 @@ td img {
     position: relative;
 }
 
-.gallery .album:hover .album__content{
+.gallery .album:hover .album__content {
     opacity: 1;
     cursor: pointer;
 }
@@ -415,8 +421,7 @@ td img {
     gap: 10px;
 }
 
-
-.gallery .album__content p i{
+.gallery .album__content p i {
     width: 32px;
     min-width: 32px;
     height: 32px;
@@ -436,18 +441,156 @@ td img {
     border-radius: 3px;
 }
 
-.album__content .album__count{
+.album__content .album__count {
     position: absolute;
     bottom: 10px;
     left: 20px;
 }
 
-
-.gallery .gallery__img{
+.gallery .gallery__img {
     margin-bottom: 24px;
     width: 100%;
 }
 
-.gallery .gallery__img img{
+.gallery .gallery__img img {
     width: 100%;
+}
+
+/* xử lý show ảnh */
+
+.my-modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .my-modal .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+} */
+
+.my-modal .modal__content {
+    animation: down 0.3s linear;
+}
+.my-modal .modal__content img {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.my-modal .modal__control button i {
+    color: var(--primary-color);
+}
+@keyframes down {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.my-modal .modal__control {
+    position: absolute;
+    top: 50%;
+    height: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: -3;
+}
+.my-modal .modal__control button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 34px;
+    padding: 20px;
+    outline: none;
+}
+.my-modal .modal__control button:hover {
+    color: #66676a;
+}
+.my-modal .modal__control .btn-pre {
+    float: left;
+}
+.my-modal .modal__control .btn-next {
+    float: right;
+}
+
+.gallery__img {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery__img img {
+    transition: 0.4s linear;
+}
+
+.gallery__img:hover .hover {
+    z-index: 1;
+}
+
+.gallery__img:hover img {
+    transform: scale(1.2);
+}
+
+.gallery__img .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    z-index: -1;
+}
+.gallery__img .hover a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 26px;
+}
+
+.drop-login a {
+    color: #3f3f3f !important;
+    font-size: 18px !important ;
+    display: flex;
+    gap: 22px;
+}
+
+.drop-login a span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.drop-login a span i {
+    font-size: 14px !important;
+    
+    margin: auto;
 }
