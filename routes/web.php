@@ -4,12 +4,31 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
 
 
 
 
 
 Route::get('/language/{lang}', [App\Http\Controllers\LanguageControler::class, 'index']);
+
+
+
+
+
+Route::prefix('/auth')->group(function(){
+    // google
+    Route::get('/google', function () {
+        return Socialite::driver('google')->redirect();
+    });
+    Route::get('/google/callback', [App\Http\Controllers\SocialController::class, 'googleCallback']);
+// facebook
+    Route::get('/facebook', function () {
+        return Socialite::driver('facebook')->redirect();
+    });
+
+    Route::get('/facebook/callback', [App\Http\Controllers\SocialController::class, 'faceBookCallback']);
+});
 
 
 Route::prefix('/')->group(function () {

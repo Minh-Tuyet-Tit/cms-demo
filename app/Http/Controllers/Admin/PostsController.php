@@ -65,6 +65,7 @@ class PostsController extends Controller
         try {
             Posts::create($request->all());
         } catch (\Throwable $th) {
+            
             return redirect()->back()->with('fail', 'Posts created fail');
         }
 

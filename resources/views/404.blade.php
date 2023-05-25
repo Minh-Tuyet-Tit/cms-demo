@@ -69,7 +69,7 @@
             <div class="row justify-content-center">
                 <div class="col-sm-10 col-xl-8">
                     <div class="error__inner">
-                        <img src="{{asset('Frontend/images/error.png')}}" alt="Error">
+                        <img src="{{asset('Frontend/images/404.png')}}" alt="Error">
                     </div>
                 </div>
             </div>

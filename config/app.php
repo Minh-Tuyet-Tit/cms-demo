@@ -58,12 +58,16 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
         //    App\Providers\TranslationServiceProvider::class,
     ])->toArray(),
 
 
-    'aliases' => Facade::defaultAliases()->merge(['Translator' => Illuminate\Support\Facades\Translator::class,])->toArray(),
+    'aliases' => Facade::defaultAliases()->merge([
+        'Translator' => Illuminate\Support\Facades\Translator::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    ])->toArray(),
 
-    
+
 
 ];

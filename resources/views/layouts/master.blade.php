@@ -103,6 +103,10 @@
         </div>
     </div> --}}
 
+
+    @if (Auth::user())
+        <h1>Da dang nhap</h1>
+    @endif
     <header class="header">
         <div class="container">
             <div class="row">
@@ -200,13 +204,26 @@
                                     {{-- <a href="" style="color: #333"> VI<i style="font-size: 16px; color: #818181;" class="fas fa-chevron-down"></i></a> --}}
 
                                     <div class="dropdown">
-                                        <button class="btn dropdown" type="button" id="dropdownMenuButton1"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i style="color: #696969" class="fas fa-user-circle fz__28"></i>
-                                        </button>
+
+
+                                        @if (Auth::user())
+                                            <button class="btn dropdown" type="button" id="dropdownMenuButton1"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img style="width: 28px; height: 28px; border-radius: 50%" src="{{ Auth::user()->avatar }}" alt="">
+                                            </button>
+                                        @else
+                                            <button class="btn dropdown" type="button" id="dropdownMenuButton1"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i style="color: #696969" class="fas fa-user-circle fz__28"></i>
+                                            </button>
+                                        @endif
+
+
+
                                         <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
                                             <li class="drop-login"><a data-toggle="modal" data-target="#p-login"
-                                                    class="dropdown-item"><span><i class="fas fa-cog"></i></span> Đăng nhập</a></li>
+                                                    class="dropdown-item"><span><i class="fas fa-cog"></i></span> Đăng
+                                                    nhập</a></li>
                                             {{-- <li><a class="dropdown-item" href="#">Đăng xuất</a></li> --}}
                                         </ul>
                                     </div>
@@ -405,7 +422,7 @@
                                                 src="{{ asset('Frontend/images/social/fb.png') }}" />
                                             Đăng nhập với Facebook
                                         </a>
-                                        <a href="" class="login-gg">
+                                        <a href="{{ url('auth/google') }}" class="login-gg">
                                             <img class="img-fluid"
                                                 src="{{ asset('Frontend/images/social/gg.png') }}" />
                                             Đăng nhập với Google

@@ -1,0 +1,11 @@
+migtate db:   php artisan migrate
+
+refresh db:  php artisan migrate:refresh
+
+thêm db : php artisan db:seed
+
+composer require laravel/socialite
+
+load cài đặt composer dump-autoload
+
+tạo mới controller php artisan make:controller SocialController

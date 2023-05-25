@@ -22,7 +22,7 @@ return new class extends Migration
             $table->tinyInteger('order');
             $table->string('meta_keyword', 255);
             $table->string('meta_description', 255);
-            $table->string('slug', 255);
+            $table->string('slug', 255)->nullable();
             $table->integer('user_id')->nullable();
             $table->timestamp('date_public');
             $table->integer('view_count');
